@@ -1,0 +1,114 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.headTitle {
+    width: 80vw;
+    height: 20vh;
+    background-color: #333333;
+    margin: 0 auto;
+}
+
+.textTitle {
+    font-family: 'Rock Salt', cursive;
+    color: white;
+    padding: 20px;
+}
+
+
+.newsletterField {
+    background-color: #C4C4C4;
+    width: 65vh;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+nav {
+    /* display: flex; */
+    width: 80vw;
+    height: auto;
+    background-color: #E1F4F3;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+  }
+  
+  .dropBtn {
+      border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdownContent a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+
+  .dropdown:hover .dropdownContent {
+      display: block;
+    }
+    
+    
+/*  STYLING FOR FOOTER  */  
+
+footer {
+    margin: 0 auto;
+    width: 80vw;
+    height: 20vh;
+    background-color: #706C61;
+}
+
+.loginCartWrap {                            /* Container for Login, My Page and Cart */
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loginText, .myPageText, .cartField {         /* Children div element Login, My Page and Cart */
+    width: 80px;
+    padding: 15px;
+}
+
+.footWrap {
+    display: flex;
+}
+
+.contactUs, .clientService, .beMember {      /* Children div element for Kontakta Oss, Kundtjänst, Bli medlem */
+    width: 25vw;
+    color: black;
+    margin-left: 8.3vw;
+}
+
