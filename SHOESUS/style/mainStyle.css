@@ -1,10 +1,14 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+body {
+    margin: 0;
+}
          /* HEADER */
 
 .headTitle {
-    width: 80vw;
+    width: 100vw;
     height: 20vh;
     background-color: #333333;
     margin: 0 auto;
@@ -14,13 +18,14 @@
     font-family: 'Rock Salt', cursive;
     color: white;
     padding: 20px;
+    margin: 0;
 }
 
           /*  NAVBAR   */
 
 nav {
     /* display: flex; */
-    width: 80vw;
+    width: 100vw;
     height: auto;
     background-color: #E1F4F3;
     margin: 0 auto;
@@ -101,7 +106,7 @@ article {
 
 footer {
     margin: 0 auto;
-    width: 80vw;
+    width: 100vw;
     height: auto;
     background-color: #706C61;
 }
