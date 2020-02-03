@@ -39,31 +39,58 @@
 
         <div class="loginCartWrap">
             <div class="loginText">
-                Login
+                Inloggning
             </div>
 
             <div class="myPageText">
-                My page
+                Mina sidor
             </div>
 
             <div class="cartField">
-                Cart (0)
+                Kundvagn
             </div>
         </div>
     </nav>
+   
+    <article>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam impedit quis nam architecto itaque autem iure, 
+        obcaecati blanditiis et soluta illum maxime? Quae tempora et architecto aliquid vel? Assumenda?
+    </article>
     
-</body>
-<footer>
-
+    
+    <footer>
+        <br> <br>
     <div class="newsletterField">
-        Prenumerera på vårt nyhetsbrev: <input type="text" class="newsletterInput">
+        Prenumerera på vårt nyhetsbrev: <input type="text" class="newsletterInput" value="Din e-postadress...">
+        <button class="sendBtn">Skicka</button>
     </div>
-
+    <br> <hr> 
     <div class="footWrap">
-        <p class="contactUs">Kontakta Oss</p>
-        <p class="clientService">Kundtjänst</p>
-        <p class="beMember">Bli medlem</p>
+        
+        
+        <div class="contactUs">
+            <h3>Kontakta Oss</h3>
+            E-mail: <a href = "mailto: shoesus@gmail.com">ourmail@shoesus.com</a> <br> <br>
+            Adress: Våragatan 6 <br> 455 65 Göteborg <br> Sverige
+        </div>
+        
+        <div class="clientService">
+            <h3>Kundtjänst</h3>
+            <a href="#">Köpvillkor</a><br>
+            <a href="#">Leverans</a><br>
+            <a href="#">Byte/Returer</a><br>
+            <a href="#">Integritetspolicy</a>
+        </div>
+        
+        <div class="beMember">
+            <h3>Bli medlem</h3>
+            <a href="#">Mina sidor</a><br>
+            <a href="#">Mina beställningar</a><br>
+            <a href="#">Nyhetsbrev</a><br>
+            <a href="#">Logga ut</a>
+        </div>
     </div>
-
+    
 </footer>
+</body>
 </html>

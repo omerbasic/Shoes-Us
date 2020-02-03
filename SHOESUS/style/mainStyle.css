@@ -1,6 +1,7 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+         /* HEADER */
 
 .headTitle {
     width: 80vw;
@@ -15,16 +16,7 @@
     padding: 20px;
 }
 
-
-.newsletterField {
-    background-color: #C4C4C4;
-    width: 65vh;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    
-}
+          /*  NAVBAR   */
 
 nav {
     /* display: flex; */
@@ -77,38 +69,86 @@ nav {
   }
   
 
-  .dropdown:hover .dropdownContent {
+.dropdown:hover .dropdownContent {
       display: block;
     }
     
+.loginCartWrap {                            /* Container for Login, My Page and Cart */
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+    }
     
-/*  STYLING FOR FOOTER  */  
+.loginText, .myPageText, .cartField {         /* Children div element Login, My Page and Cart */
+        width: 80px;
+        padding: 15px;
+    }
+    
+
+       /*  MAIN/ARTICLE  */
+article {
+    background-color: white;
+    margin: 0 auto;
+    width: 80vw;
+    height: auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+        /*  FOOTER  */  
 
 footer {
     margin: 0 auto;
     width: 80vw;
-    height: 20vh;
+    height: auto;
     background-color: #706C61;
 }
 
-.loginCartWrap {                            /* Container for Login, My Page and Cart */
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
+.newsletterField {
+    background-color: #C4C4C4;
+    width: 60vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    
 }
 
-.loginText, .myPageText, .cartField {         /* Children div element Login, My Page and Cart */
-    width: 80px;
-    padding: 15px;
+.newsletterInput {
+    color: #C4C4C4;
+    padding: 5px;
 }
+
+.sendBtn {
+    background-color: #706C61;
+    border: none;
+    color:white;
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+}
+
+
+
+/*  FOOTER  */ 
 
 .footWrap {
     display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.footWrap a {
+    text-decoration: none;
+    color: black;
 }
 
 .contactUs, .clientService, .beMember {      /* Children div element for Kontakta Oss, Kundtjänst, Bli medlem */
-    width: 25vw;
+    width: 25%;
     color: black;
-    margin-left: 8.3vw;
+    text-decoration: none;
+    padding: 10px;
 }
 
