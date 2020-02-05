@@ -43,13 +43,13 @@ nav {
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: inherit;
     font-family: inherit; 
     margin: 0; 
   }
   
   .dropBtn {
-      border: none;
+    background-color: #E1F4F3;
+    border: none;
     outline: none;
     font-size: 18px;
     padding: 15px;
@@ -72,10 +72,15 @@ nav {
     display: block;
     text-align: left;
   }
+
+.dropdownContent a:hover {
+    
+}
   
 
 .dropdown:hover .dropdownContent {
       display: block;
+      background-color: #C4C4C4;
     }
     
 .loginCartWrap {                            /* Container for Login, My Page and Cart */
