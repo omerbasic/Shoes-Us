@@ -6,7 +6,7 @@ try {
 
         if($_POST['endpoint'] == 'add') {
 
-            
+            //här kan du lägga till post eller annan metod
 
         } else {
             throw new Exception('Not a valid endpoint', 501);
