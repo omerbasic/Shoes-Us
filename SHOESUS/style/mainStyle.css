@@ -212,3 +212,13 @@ footer {
         width: 100%;
     }
   }
+
+  @media only screen and (max-width: 400px) {
+    .cartField, .myPageText, .loginText, .dropBtn {
+        display: none;
+        }
+    .menuIconField {
+        display: flex;
+        width: 100%;
+    }
+  }
