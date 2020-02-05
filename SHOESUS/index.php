@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shoes Us - webbshop</title>
+    <title>ShoesUs - Hemsida</title> 
     <link rel="stylesheet" href="./style/mainStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
@@ -20,9 +20,10 @@
             <button class="dropBtn">Dam
             </button>
             <div class="dropdownContent">
-                <a href="#">Stövlar</a>
-                <a href="#">Stövlar</a>
-                <a href="#">Stövlar</a>
+                <a href="#">Boots</a>
+                <a href="#">Sneakers</a>
+                <a href="#">Lågskor</a>
+                <a href="#">Pumps</a>
                 <a href="#">Stövlar</a>
             </div>
         </div>  
@@ -30,24 +31,25 @@
         <div class="dropdown">
         <button class="dropBtn">Herr</button>
             <div class="dropdownContent">
+                <a href="#">Boots</a>
+                <a href="#">Sandaler</a>
                 <a href="#">Sneakers</a>
-                <a href="#">Sneakers</a>
-                <a href="#">Sneakers</a>
-                <a href="#">Sneakers</a>
+                <a href="#">Lågskor</a>
             </div>
         </div>
 
         <div class="loginCartWrap">
             <div class="loginText">
-                Inloggning
+                <a href="login.php">Inloggning</a>
             </div>
 
             <div class="myPageText">
-                Mina sidor
+                <a href="myPage.php">Mina sidor</a>
             </div>
 
             <div class="cartField">
-                Kundvagn
+                <div class="numberOfItemsInCart">(...)</div>
+                <a href="cart.php"><img src="./img/CartIcon.png" style="width:20px;height:auto;text-align:right;"></a>
             </div>
         </div>
     </nav>
