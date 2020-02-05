@@ -10,12 +10,17 @@
 </head>
 <body>
     <header>
+        
         <div class="headTitle">
             <h1 class="textTitle">Shoes US</h1>
         </div>
     </header>
-
+    
     <nav> 
+        <div class="menuIconField">
+            <button class="menuButton"><img src="./img/menuIcon.png" style="width:30px;"></button>
+        </div>
+
         <div class="dropdown">
             <button class="dropBtn">Dam
             </button>
