@@ -49,14 +49,20 @@
             </div>
         </div>
     </nav>
-   
-    <div id="main">
-        <h1>Logga in</h1>
-        <div id="inputDiv">
+
+    <div id="loginDiv">
+        <div>
+            <h1>Logga in:</h1>
+        </div>
+        <div id="username">
             Användarnamn:<input type="text" placeholder="Användarnamn" id="usernameInput">
+        </div> 
+        <div id="password">
             Lösenord:<input type="text" placeholder="Lösenord" id="passwordInput">
+        </div>
+        <div id="button">
             <button id="loginButton">Logga in</button>
-        </div>   
+        </div>    
     </div>
     
     

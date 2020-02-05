@@ -54,10 +54,16 @@
         </div>
     </nav>
    
-    <article>
+    <div class="article">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam impedit quis nam architecto itaque autem iure, 
         obcaecati blanditiis et soluta illum maxime? Quae tempora et architecto aliquid vel? Assumenda?
-    </article>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque esse vitae rerum enim perspiciatis? Pariatur eos necessitatibus tempore, a iusto unde officia dignissimos fugit eveniet accusantium quis labore expedita sunt!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus error architecto voluptatum incidunt facilis mollitia labore. Quos magni commodi aspernatur doloribus sint aliquam eos voluptatum eum fugiat, rem quisquam!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum amet eos quia corporis ex repellendus. Provident saepe vel nemo expedita eveniet iusto quasi, nulla ratione doloremque earum consectetur sit facilis.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita alias neque deleniti eum asperiores quo iste totam maxime et a blanditiis sint aliquam repudiandae cumque cum, voluptate molestias repellat ipsa.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nisi aliquid! Voluptas culpa provident voluptatem blanditiis? A quia molestiae facilis, optio error beatae animi recusandae vero eaque, placeat nemo hic!locale_filter_matches
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iure veritatis aspernatur cumque quasi, atque velit repudiandae eligendi, laudantium dolor alias animi placeat assumenda numquam cupiditate tempora porro, error delectus?
+    </div>
     
     
     <footer>
