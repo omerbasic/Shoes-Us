@@ -138,10 +138,10 @@ nav {
        /*  MAIN/ARTICLE  */
 .article {
     background-color: white;
-    margin: 0;
-    width: 90vw;
+    margin: 0 auto;
+    width: 95vw;
     height: auto;
-    text-align: center;
+    text-align: justify;
     padding: 20px;
 }
 
@@ -225,8 +225,29 @@ footer {
     .cartField, .myPageText, .loginText, .dropBtn {
         display: none;
         }
+
     .menuIconField {
         display: flex;
         width: 100%;
+        justify-content: center;
+        align-items: baseline;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+
+    .menuButton {
+        font-size: 1.8em;
+        background-color: #E1F4F3;
+        border: none;
+    }
+
+    .menuIcon {
+        margin-right: 20px;
+    }
+
+    .article {
+        width: 89vw;
+        margin: 0 auto;
     }
   }

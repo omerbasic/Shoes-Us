@@ -7,6 +7,7 @@
     <title>ShoesUs - Hemsida</title> 
     <link rel="stylesheet" href="./style/mainStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+    <script defer src="./handler.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +19,7 @@
     
     <nav> 
         <div class="menuIconField">
-            <button class="menuButton"><img src="./img/menuIcon.png" style="width:30px;"></button>
+            <button onclick="dropMenu()" class="menuButton"><img src="./img/menuIcon.png" style="width:25px;" class="menuIcon">Meny</button>
         </div>
 
         <div class="dropdown">
