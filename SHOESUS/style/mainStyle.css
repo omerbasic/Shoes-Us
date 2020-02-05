@@ -74,13 +74,14 @@ nav {
   }
 
 .dropdownContent a:hover {
-    
+    background-color: #706C61;
+    color: white;
 }
   
 
 .dropdown:hover .dropdownContent {
       display: block;
-      background-color: #C4C4C4;
+      background-color: #f9f9f9;
     }
     
 .loginCartWrap {                            /* Container for Login, My Page and Cart */

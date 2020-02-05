@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shoes Us - Indez</title>
+    <title>ShoesUs - Hemsida</title>
     <link rel="stylesheet" href="./style/mainStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
@@ -20,9 +20,10 @@
             <button class="dropBtn">Dam
             </button>
             <div class="dropdownContent">
-                <a href="#">Stövlar</a>
-                <a href="#">Stövlar</a>
-                <a href="#">Stövlar</a>
+                <a href="#">Boots</a>
+                <a href="#">Sneakers</a>
+                <a href="#">Lågskor</a>
+                <a href="#">Pumps</a>
                 <a href="#">Stövlar</a>
             </div>
         </div>  
@@ -30,10 +31,10 @@
         <div class="dropdown">
         <button class="dropBtn">Herr</button>
             <div class="dropdownContent">
+                <a href="#">Boots</a>
+                <a href="#">Sandaler</a>
                 <a href="#">Sneakers</a>
-                <a href="#">Sneakers</a>
-                <a href="#">Sneakers</a>
-                <a href="#">Sneakers</a>
+                <a href="#">Lågskor</a>
             </div>
         </div>
 
