@@ -63,6 +63,11 @@ nav {
     padding: 15px;
 }
 
+.dropBtn:hover {
+    background-color: #706C61;
+    color: white;
+}
+
 .dropdownContent {
     display: none;
     position: absolute;
@@ -84,8 +89,7 @@ nav {
 .dropdownContent a:hover {
     background-color: #706C61;
     color: white;
-}
-  
+} 
 
 .dropdown:hover .dropdownContent {
     display: block;
@@ -115,8 +119,9 @@ nav {
     
 .loginText, .myPageText {         /* Children div element Login, My Page and Cart */
     width: 80px;
-    padding: 15px;
-    }
+    padding: 18px;
+    margin: 0;
+}
 
 .numberOfItemsInCart {
     text-align: left;
@@ -126,7 +131,7 @@ nav {
     padding:15px;
     width:60px;
     display:flex;
-    margin-right: 20px;
+    margin-right: 13px;
 }
 
 .cartField:hover {
@@ -185,8 +190,6 @@ footer {
     cursor: pointer;
 }
 
-
-
 /*  FOOTER  */ 
 
 .footWrap {
@@ -211,7 +214,7 @@ footer {
     display:none;
 } 
 
-
+/* Responsivitet */
 @media only screen and (max-width: 600px) {
     .footWrap {
         flex-direction: column;
