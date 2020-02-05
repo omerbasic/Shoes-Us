@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ShoesUs - Hemsida</title>
+    <title>ShoesUs - Hemsida</title> 
     <link rel="stylesheet" href="./style/mainStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
@@ -72,7 +72,7 @@
         
         <div class="contactUs">
             <h3>Kontakta Oss</h3>
-            E-mail: <a href = "mailto: shoesus@gmail.com">ourmail@shoesus.com</a> <br> <br>
+            E-mail: <a href = "mailto: shoesus@gmail.com">ourmail@shoesus.com</a><br>
             Adress: Våragatan 6 <br> 455 65 Göteborg <br> Sverige
         </div>
         
@@ -85,11 +85,9 @@
         </div>
         
         <div class="beMember">
-            <h3>Bli medlem</h3>
-            <a href="#">Mina sidor</a><br>
-            <a href="#">Mina beställningar</a><br>
-            <a href="#">Nyhetsbrev</a><br>
-            <a href="#">Logga ut</a>
+            <h3>Medlem</h3>
+            <a href="#">Bli medlem</a><br>
+            <a href="#">Nyhetsbrev</a>
         </div>
     </div>
     
