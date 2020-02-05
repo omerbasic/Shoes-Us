@@ -210,7 +210,7 @@ footer {
     padding: 10px;
 }
 
-.menuIconField {
+.mobileScreenMenu {
     display:none;
 } 
 
@@ -225,32 +225,38 @@ footer {
   }
 
   @media only screen and (max-width: 400px) {
-    .cartField, .myPageText, .loginText, .dropBtn {
+    .largeScreenMenu {
         display: none;
         }
 
-    .menuIconField {
+    .mobileScreenMenu {
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: baseline;
         padding-top: 4px;
         padding-bottom: 4px;
+        
     }
 
-
-    .menuButton {
-        font-size: 1.8em;
+    #dropdownMenuButton {
         background-color: #E1F4F3;
+        color: black;
         border: none;
     }
 
-    .menuIcon {
-        margin-right: 20px;
+    .dropdown-menu.show {
+        z-index: auto;
+        position: sticky;
     }
+
 
     .article {
         width: 89vw;
         margin: 0 auto;
+    }
+
+    .newsletterField {
+        width: 90%
     }
   }

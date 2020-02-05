@@ -6,7 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ShoesUs - Hemsida</title> 
     <link rel="stylesheet" href="./style/mainStyle.css">
+    <!-- Link to get th right font -->
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+    <!-- Link to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Link to the handler.js -->
     <script defer src="./handler.js"></script>
 </head>
 <body>
@@ -17,11 +24,27 @@
         </div>
     </header>
     
+<!-- TO BE FIXED: 
+    On responsive design for mobile phone:
+        the dropdown menu is behind the article (done with Bootstrap) check z-index maybe?! Otherwise, it works!-->
     <nav> 
-        <div class="menuIconField">
-            <button onclick="dropMenu()" class="menuButton"><img src="./img/menuIcon.png" style="width:25px;" class="menuIcon">Meny</button>
-        </div>
+        
+        <div class="mobileScreenMenu">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Meny
+                </button>
 
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Inloggning</a>
+                    <a class="dropdown-item" href="#">Mina sidor</a>
+                    <a class="dropdown-item" href="#">Min kundvagn</a>
+                </div>
+            </div>
+        </div>
+        
+
+    <div class="largeScreenMenu">
         <div class="dropdown">
             <button class="dropBtn">Dam
             </button>
@@ -58,6 +81,7 @@
                 <a href="cart.php"><img src="./img/CartIcon.png" style="width:20px;height:auto;text-align:right;"></a>
             </div>
         </div>
+    </div>
     </nav>
    
     <div class="article">
