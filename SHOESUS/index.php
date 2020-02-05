@@ -40,11 +40,11 @@
 
         <div class="loginCartWrap">
             <div class="loginText">
-                Inloggning
+                <a href="login.php">Inloggning</a>
             </div>
 
             <div class="myPageText">
-                Mina sidor
+                <a href="myPage.php">Mina sidor</a>
             </div>
 
             <div class="cartField">

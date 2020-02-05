@@ -80,15 +80,29 @@ nav {
   
 
 .dropdown:hover .dropdownContent {
-      display: block;
-      background-color: #f9f9f9;
+    display: block;
+    background-color: #f9f9f9;
     }
     
 .loginCartWrap {                            /* Container for Login, My Page and Cart */
-        text-align: right;
-        display: flex;
-        justify-content: flex-end;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
     }
+
+.loginCartWrap a, .myPageText a {
+    text-decoration: none;
+    color: black;
+}
+
+.loginCartWrap a:hover {
+    color:white;
+}
+
+.loginText:hover, .myPageText:hover {
+    background-color: #706C61;
+    color: white;
+}
     
 .loginText, .myPageText, .cartField {         /* Children div element Login, My Page and Cart */
         width: 80px;
