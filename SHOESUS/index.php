@@ -7,6 +7,7 @@
     <title>Shoes Us - webbshop</title>
     <link rel="stylesheet" href="./style/mainStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+    <script defer src="./handler.js"></script>
 </head>
 <body>
     <header>
