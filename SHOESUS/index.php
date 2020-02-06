@@ -17,28 +17,25 @@
     <script defer src="./handler.js"></script>
 </head>
 <body>
-    <header>
-        
+<header>
         <div class="headTitle">
-            <h1 class="textTitle">Shoes US</h1>
+            <h1 class="textTitle" onclick="toIndex()">Shoes US</h1>
         </div>
     </header>
     
-<!-- TO BE FIXED: 
-    On responsive design for mobile phone:
-        the dropdown menu is behind the article (done with Bootstrap) check z-index maybe?! Otherwise, it works!-->
+
     <nav> 
-        
+
         <div class="mobileScreenMenu">
-            <div class="dropdown">
+            <div class="RespDropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Meny
                 </button>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Inloggning</a>
-                    <a class="dropdown-item" href="#">Mina sidor</a>
-                    <a class="dropdown-item" href="#">Min kundvagn</a>
+                    <a class="dropdown-item" href="login.php">Inloggning</a>
+                    <a class="dropdown-item" href="myPage.php">Mina sidor</a>
+                    <a class="dropdown-item" href="cart.php">Min kundvagn</a>
                 </div>
             </div>
         </div>

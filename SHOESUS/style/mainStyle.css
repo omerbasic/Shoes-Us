@@ -190,7 +190,7 @@ footer {
     cursor: pointer;
 }
 
-/*  FOOTER  */ 
+
 
 .footWrap {
     display: flex;
@@ -214,8 +214,11 @@ footer {
     display:none;
 } 
 
+
 /* Responsivitet */
-@media only screen and (max-width: 600px) {
+
+/* ON TABLETS */
+@media only screen and (max-width: 800px) {
     .footWrap {
         flex-direction: column;
     }
@@ -224,7 +227,8 @@ footer {
     }
   }
 
-  @media only screen and (max-width: 400px) {
+/* ON MOBILE SCREEN */  
+  @media only screen and (max-width: 600px) {
     .largeScreenMenu {
         display: none;
         }
@@ -245,9 +249,9 @@ footer {
         border: none;
     }
 
-    .dropdown-menu.show {
-        z-index: auto;
-        position: sticky;
+    div.dropdown-menu.show {
+        width: 100% !important;
+        border: none;
     }
 
 
@@ -259,4 +263,14 @@ footer {
     .newsletterField {
         width: 90%
     }
+
+    .RespDropdown, .dropup {
+        z-index: 99999 !important;
+        position: static !important;
   }
+    .dropdown-item {
+        padding: 25px !important;
+        text-align: center !important;
+    }
+   
+}
