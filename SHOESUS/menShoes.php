@@ -92,11 +92,11 @@
     </div>
     </nav>
 
-    <div class='categoryTitle'>
-        <h1>Herr</h1>
-    </div> 
 
     <div class="article">
+        <div class='categoryTitle'>
+            <h1>Herr</h1>
+        </div> 
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam impedit quis nam architecto itaque autem iure, 
         obcaecati blanditiis et soluta illum maxime? Quae tempora et architecto aliquid vel? Assumenda?
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque esse vitae rerum enim perspiciatis? Pariatur eos necessitatibus tempore, a iusto unde officia dignissimos fugit eveniet accusantium quis labore expedita sunt!

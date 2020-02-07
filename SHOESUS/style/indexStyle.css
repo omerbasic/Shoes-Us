@@ -1,0 +1,17 @@
+.article {
+    text-align: center;
+}
+#reaBild {
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+}
+.menFemImg {
+    display: flex;
+    justify-content: center;
+}
+
+#damBild, #herrBild {
+    width: 300px;
+    margin: 50px;
+}
