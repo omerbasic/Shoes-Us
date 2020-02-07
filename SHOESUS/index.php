@@ -54,8 +54,6 @@
                 <a class="categoryListDropDown" href="#">Boots</a> <br>
                 <a class="categoryListDropDown" href="#">Sneakers</a> <br>
                 <a class="categoryListDropDown" href="#">Lågskor</a> <br>
-                <a class="categoryListDropDown" href="#">Pumps</a> <br>
-                <a class="categoryListDropDown" href="#">Stövlar</a>
             </div>
         </div>  
 
