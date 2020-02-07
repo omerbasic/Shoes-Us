@@ -15,7 +15,7 @@
     <script src="handler.js"></script>
 </head>
 <body>
-    <header>
+<header>
         <div class="headTitle">
             <h1 class="textTitle" onclick="toIndex()">Shoes US</h1>
         </div>
@@ -40,27 +40,40 @@
         
 
     <div class="largeScreenMenu">
-        <div class="dropdown">
-            <button class="dropBtn">Dam
-            </button>
-            <div class="dropdownContent">
-                <a href="#">Boots</a>
-                <a href="#">Sneakers</a>
-                <a href="#">Lågskor</a>
-                <a href="#">Pumps</a>
-                <a href="#">Stövlar</a>
+        <div class="manWomanField">
+        <div class="dropdown" id="herr">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                HERR
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="categoryListDropDown" href="menShoes.php">HERR (Alla)</a> <br>
+                <hr>
+                <a class="categoryListDropDown" href="#">Boots</a> <br>
+                <a class="categoryListDropDown" href="#">Sneakers</a> <br>
+                <a class="categoryListDropDown" href="#">Lågskor</a> <br>
+                <a class="categoryListDropDown" href="#">Pumps</a> <br>
+                <a class="categoryListDropDown" href="#">Stövlar</a>
             </div>
         </div>  
 
-        <div class="dropdown">
-        <button class="dropBtn">Herr</button>
-            <div class="dropdownContent">
-                <a href="#">Boots</a>
-                <a href="#">Sandaler</a>
-                <a href="#">Sneakers</a>
-                <a href="#">Lågskor</a>
+        <div class="dropdown" id="dam">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                DAM
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="categoryListDropDown" href="femShoes.php">DAM (Alla)</a> <br>
+                <hr>
+                <a class="categoryListDropDown" href="#">Boots</a> <br>
+                <a class="categoryListDropDown" href="#">Sneakers</a> <br>
+                <a class="categoryListDropDown" href="#">Lågskor</a> <br>
+                <a class="categoryListDropDown" href="#">Pumps</a> <br>
+                <a class="categoryListDropDown" href="#">Stövlar</a> 
             </div>
-        </div>
+        </div> 
+        </div> 
+     
 
         <div class="loginCartWrap">
             <div class="loginText">
