@@ -32,6 +32,10 @@
                 </button>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="sales.php">% REA %</a>
+                    <hr>
+                    <a class="dropdown-item" href="myPage.php">MITT KONTO</a>
+                    <hr>
                     <a class="dropdown-item" href="login.php">Inloggning</a>
                     <a class="dropdown-item" href="myPage.php">Mina sidor</a>
                     <a class="dropdown-item" href="cart.php">Min kundvagn</a>
@@ -91,19 +95,21 @@
     </div>
     </nav>
 
-    <div id="loginDiv">
-        <div>
-            <h1>Logga in:</h1>
+    <div class="article">
+        <div id="loginDiv">
+            <div>
+                <h1>Logga in:</h1>
+            </div>
+            <div id="username">
+                Användarnamn:<input type="text" placeholder="Användarnamn" id="usernameInput">
+            </div> 
+            <div id="password">
+                Lösenord:<input type="text" placeholder="Lösenord" id="passwordInput">
+            </div>
+            <div id="button">
+                <button id="loginButton">Logga in</button>
+            </div>    
         </div>
-        <div id="username">
-            Användarnamn:<input type="text" placeholder="Användarnamn" id="usernameInput">
-        </div> 
-        <div id="password">
-            Lösenord:<input type="text" placeholder="Lösenord" id="passwordInput">
-        </div>
-        <div id="button">
-            <button id="loginButton">Logga in</button>
-        </div>    
     </div>
     
     

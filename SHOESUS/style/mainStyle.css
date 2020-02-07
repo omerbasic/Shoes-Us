@@ -41,7 +41,7 @@ nav {
     height: auto;
     background-color: #E1F4F3;
     margin: 0;
-    margin-top: 11%;
+    margin-top: 8%;
     position: fixed;
 }
 
@@ -228,7 +228,19 @@ footer {
 
 /* Responsivitet */
 
+/* IPAD PRO */
+@media only screen and (max-width: 1024px) {
+    nav {
+        margin-top: 22%;
+    }
+
+    .article {
+        margin-top: 30%;
+    }
+}
+
 /* ON TABLETS */
+
 @media only screen and (max-width: 800px) {
     .footWrap {
         flex-direction: column;
@@ -240,6 +252,20 @@ footer {
     nav {
         margin-top: 22%;
     }
+
+    .article {
+        margin-top: 35%;
+    }
+
+    .menFemImg {
+        flex-wrap: wrap;
+    }
+
+    #damBild, #herrBild {
+        width: 100%;
+        margin: 20px !important;
+    }
+
   }
 
 /* ON MOBILE SCREEN */  
@@ -275,8 +301,9 @@ footer {
 
 
     .article {
-        width: 89vw;
+        width: 90vw;
         margin: 0 auto;
+        margin-top: 40%;
     }
 
     .newsletterField {
@@ -291,5 +318,10 @@ footer {
         padding: 25px !important;
         text-align: center !important;
     }
+
+    #reaBild {
+        display: none;
+    }
+
    
 }

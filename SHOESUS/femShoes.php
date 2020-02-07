@@ -33,6 +33,10 @@
                 </button>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="sales.php">% REA %</a>
+                    <hr>
+                    <a class="dropdown-item" href="myPage.php">MITT KONTO</a>
+                    <hr>
                     <a class="dropdown-item" href="login.php">Inloggning</a>
                     <a class="dropdown-item" href="myPage.php">Mina sidor</a>
                     <a class="dropdown-item" href="cart.php">Min kundvagn</a>
