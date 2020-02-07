@@ -101,6 +101,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-left: -100px;
     }
 
 .loginCartWrap a, .myPageText a {
@@ -118,7 +119,7 @@ nav {
 }
     
 .loginText, .myPageText {         /* Children div element Login, My Page and Cart */
-    width: 80px;
+    width: 120px;
     padding: 18px;
     margin: 0;
 }
@@ -131,7 +132,7 @@ nav {
     padding:15px;
     width:60px;
     display:flex;
-    margin-right: 13px;
+    margin-right: 30px;
 }
 
 .cartField:hover {
