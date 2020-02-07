@@ -137,6 +137,11 @@ nav {
     color: white;
 }
     
+.categoryTitle {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
 
        /*  MAIN/ARTICLE  */
 .article {
