@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
-    <script src="handler.js"></script>
+    <script defer type = "module" src="handler.js"></script>
 </head>
 <body>
 <header>
@@ -97,19 +97,8 @@
 
     <div class="article">
         <div id="loginDiv">
-            <div>
-                <h1>Logga in:</h1>
-            </div>
-            <div id="username">
-                Användarnamn:<input type="text" placeholder="Användarnamn" id="usernameInput">
-            </div> 
-            <div id="password">
-                Lösenord:<input type="text" placeholder="Lösenord" id="passwordInput">
-            </div>
-            <div id="button">
-                <button id="loginButton">Logga in</button>
-            </div>    
-        </div>
+            <input type="text" id="usernameInput">
+            <button id = "login_btn">Login</button>
     </div>
     
     
