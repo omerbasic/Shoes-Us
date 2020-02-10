@@ -38,11 +38,10 @@ function getAllCategory() {
 }
 document.getElementById("login_btn").addEventListener("click", getSpecificUser);
 
-getAllCategory();
+/* getAllCategory();
 getAllOrder();
 getAllUser();
-getAllProducts();
-getSpecificUser("ensarsemail@test.com");
+getAllProducts(); */
 
 
 // Funktion för att komma till startsidan från inloggningssidan
