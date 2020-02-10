@@ -97,8 +97,11 @@
 
     <div class="article">
         <div id="loginDiv">
-            <input type="text" id="usernameInput">
-            <button id = "login_btn">Login</button>
+        <h1>Username</h1>
+        <input type="text" id="usernameInput">
+        <h1>Password</h1>
+        <input type="text" id="passwordInput">
+        <button id = "login_btn">Login</button>
     </div>
     
     
