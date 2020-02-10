@@ -20,7 +20,7 @@ function getSpecific($uname, $pw){
     $database = new Database(); 
 
     //$database->bindValue(':email', $uname, PDO::PARAM_INT);
-    $query = $database->connection->prepare('SELECT * FROM User WHERE email = "'. $uname . '" AND password = "'. $pw .'";');
+    $query = $database->connection->prepare('SELECT * FROM User WHERE email = :email AND password = :password;');
     $query->execute(array(':email' => $uname, ':password' => $pw));
     $result = $query->fetch(PDO::FETCH_ASSOC);
     //Använder fetch istället för fetchAll för att få ut usern utanför array av alla users

@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
-    <script defer type = "module" src="handler.js"></script>
+    <script defer type="module" src="handler.js"></script>
 </head>
 <body>
 <header>
@@ -101,7 +101,7 @@
         <input type="text" id="usernameInput">
         <h1>Password</h1>
         <input type="text" id="passwordInput">
-        <button id = "login_btn">Login</button>
+        <button id="login_btn">Login</button>
     </div>
     
     
