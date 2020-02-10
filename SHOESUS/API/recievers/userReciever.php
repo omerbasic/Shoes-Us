@@ -6,7 +6,9 @@ try {
 
         if($_POST['endpoint'] == 'add') {
 
-            //här kan du lägga till post eller annan metod
+            include('./../Handlers/userHandler.php');
+            $result = getAll();
+            echo json_encode($result); 
 
         } else {
             throw new Exception('Not a valid endpoint', 501);
@@ -20,6 +22,11 @@ try {
             include('./../Handlers/userHandler.php');
             $result = getAll();
             echo json_encode($result); 
+
+        } else if ($_GET['endpoint'] == 'getSpecific'){
+            include('./../Handlers/userHandler.php');
+            $result = getSpecific($_GET['username']);
+            echo json_encode($result);
 
         } else {
             throw new Exception('Not a valid endpoint', 501);

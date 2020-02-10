@@ -1,3 +1,5 @@
+import { getSpecificUser } from './Resources/userResource.js'
+
 function makeRequest(url, method, FormData, callback) {
     fetch(url, {
         method: method,
@@ -11,15 +13,15 @@ function makeRequest(url, method, FormData, callback) {
     })
 }
 
-function getAllProducts() {
+export function getAllProducts() {
     makeRequest('./API/recievers/productReciever.php?endpoint=getAll', 'GET', null, (result) => {
-        console.log(result)
+        
     })
 }
 
 function getAllUser() {
     makeRequest('./API/recievers/userReciever.php?endpoint=getAll', 'GET', null, (result) => {
-        console.log(result)
+        console.log (result)
     })
 }
 
@@ -34,13 +36,79 @@ function getAllCategory() {
         console.log(result)
     })
 }
+document.getElementById("login_btn").addEventListener("click", getSpecificUser);
 
 getAllCategory();
 getAllOrder();
 getAllUser();
 getAllProducts();
+getSpecificUser("ensarsemail@test.com");
+
 
 // Funktion för att komma till startsidan från inloggningssidan
 function toIndex() {
     window.location = "index.php"
 }
+
+
+
+//Funktion för att logga in
+
+
+/* function check(username) {
+    var un = username;
+    var pw = password;
+    var userToLogIn = undefined;
+
+    getSpecificUser(un);
+    console.log()
+  
+    users.forEach(user => {
+      if (un == user.username && pw == user.password) {
+        userToLogIn = user;
+  
+        loggedIn = true;
+        localStorage.setItem("Current User", JSON.stringify(userToLogIn));
+        
+      }
+    });
+  
+    if (!userToLogIn) {
+      alert("Login was unsuccessful, please check your username and password");
+  
+      loggedIn = false;
+    }
+  } */
+
+//Funktion för att registrera (temp)
+/* function store(username, password) {
+    var existingUsername = false;
+    
+  
+    users.forEach(user => {
+        if(username==user.username){
+            existingUsername = true;
+        }
+  });
+            if (!existingUsername) {
+              var newUser = {
+                username: username,
+                password: password,
+                orders: []
+              };
+        
+              users = users || [];
+              users.push(newUser);
+              var allUsers = JSON.stringify(users);
+              localStorage.allaAnvändare = allUsers;
+              users = localStorage.getItem("allaAnvändare");
+              location.reload();
+            } 
+            else{
+                alert("Username already exists");
+            }
+  }
+
+  function getCurrentUser() {
+    return JSON.parse(localStorage.getItem("Current User"));
+  } */

@@ -15,4 +15,21 @@ function getAll() {
     return $result; 
 }
 
+function getSpecific($uname){
+    include_once('./../Class/database.php');
+    $database = new Database(); 
+
+    //$database->bindValue(':email', $uname, PDO::PARAM_INT);
+    $query = $database->connection->prepare('SELECT * FROM User WHERE email = '. $uname . ';');
+    $query->execute();
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    //Använder fetch istället för fetchAll för att få ut usern utanför array av alla users
+
+    if (empty($result)) {
+        throw new exception('No user found', 404);
+        exit;
+    }
+    return $result; 
+}
+
 ?>
