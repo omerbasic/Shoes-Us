@@ -16,15 +16,15 @@ function makeRequest(url, method, FormData, callback) {
 export function getSpecificUser(event) {
 
     var username = document.getElementById("usernameInput").value
-    makeRequest('./API/recievers/userReciever.php?endpoint=getSpecific&username=' + username, 'GET', null, (result) => {
-        if (username = result.email){
+    var password = document.getElementById("passwordInput").value
+    makeRequest('./API/recievers/userReciever.php?endpoint=getSpecific&username=' + username + '&password=' + password, 'GET', null, (result) => {
+        
+        if (username = result.email && password == result.password){
         console.log(result)
+        console.log(result.password)
         
         localStorage.setItem("Current User", JSON.stringify(result));
-    }
-    else{
-        alert("Fel användarnamn");
-    }
+            }
     })
 }
 

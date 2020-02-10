@@ -15,13 +15,13 @@ function getAll() {
     return $result; 
 }
 
-function getSpecific($uname){
+function getSpecific($uname, $pw){
     include_once('./../Class/database.php');
     $database = new Database(); 
 
     //$database->bindValue(':email', $uname, PDO::PARAM_INT);
-    $query = $database->connection->prepare('SELECT * FROM User WHERE email = '. $uname . ';');
-    $query->execute();
+    $query = $database->connection->prepare('SELECT * FROM User WHERE email = "'. $uname . '" AND password = "'. $pw .'";');
+    $query->execute(array(':email' => $uname, ':password' => $pw));
     $result = $query->fetch(PDO::FETCH_ASSOC);
     //Använder fetch istället för fetchAll för att få ut usern utanför array av alla users
 
