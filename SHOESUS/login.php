@@ -100,7 +100,7 @@
         <h1>Username</h1>
         <input type="text" id="usernameInput">
         <h1>Password</h1>
-        <input type="text" id="passwordInput">
+        <input type="password" id="passwordInput">
         <button id = "login_btn">Login</button>
     </div>
     
