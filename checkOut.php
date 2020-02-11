@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ShoesUs - Hemsida</title> 
     <link rel="stylesheet" href="./style/mainStyle.css">
+    <link rel="stylesheet" href="./style/checkOutStyle.css">
     <!-- Link to get th right font -->
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <!-- Link to use Bootstrap -->
@@ -14,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Link to the handler.js -->
-    <script defer src="./handler.js"></script>
+    <script defer type ="module" src="./checkOutHandler.js"></script>
 </head>
 <body>
 <header>
@@ -104,7 +105,7 @@
         </div>
 
         <div class="checkOutForm">
-        <form action="" method="get">
+        <form action="" method="post">
             <fieldset id="userData">
             Förenamn: <input type="text" name="fName" value="..." id="fName"><br>
             Efteramn: <input type="text" name="lName" value="..." id="lName"><br>
@@ -114,7 +115,7 @@
             Land: <input type="text" name="country" value="..." id="country"><br>
             Telefonnummer: <input type="text" name="phone" value="..." id="phone"><br>
             Postadress: <input type="text" name="email" value="..." id="email"><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" id="checkOutSubmit">
             </fieldset>
         </form>
 
