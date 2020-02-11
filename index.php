@@ -20,7 +20,7 @@
 <body>
 <header>
         <div class="headTitle">
-            <h1 class="textTitle" onclick="toIndex()">Shoes US</h1>
+            <h1 class="textTitle">Shoes US</h1>
         </div>
     </header>
     

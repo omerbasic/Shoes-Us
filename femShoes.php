@@ -53,11 +53,7 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="categoryListDropDown" href="menShoes.php">HERR (Alla)</a> <br>
-                <hr>
-                <a class="categoryListDropDown" href="#">Boots</a> <br>
-                <a class="categoryListDropDown" href="#">Sneakers</a> <br>
-                <a class="categoryListDropDown" href="#">Lågskor</a> 
+                <div class="categoryListDropDown" id="menShoes">Herr</div>
             </div>
         </div>  
 
@@ -67,13 +63,7 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="categoryListDropDown" href="femShoes.php">DAM (Alla)</a> <br>
-                <hr>
-                <a class="categoryListDropDown" href="#">Boots</a> <br>
-                <a class="categoryListDropDown" href="#">Sneakers</a> <br>
-                <a class="categoryListDropDown" href="#">Lågskor</a> <br>
-                <a class="categoryListDropDown" href="#">Pumps</a> <br>
-                <a class="categoryListDropDown" href="#">Stövlar</a> 
+                <div class="categoryListDropDown" id="womenShoes">Dam</div> 
             </div>
         </div> 
         </div> 
