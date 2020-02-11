@@ -43,12 +43,12 @@ function getAllCategory() {
 }
 document.getElementById("menShoes").addEventListener("click", getAllCategory);
 document.getElementById("womenShoes").addEventListener("click", getAllCategory)
-// document.getElementById("login_btn").addEventListener("click", getSpecificUser);
+document.getElementById("login_btn").addEventListener("click", getSpecificUser);
 
 getAllCategory();
 /*  getAllOrder();
 getAllUser();
-getAllProducts(); */
+getAllProducts(); 
 
 
 
