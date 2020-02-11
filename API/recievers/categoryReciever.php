@@ -21,7 +21,13 @@ try {
             $result = getAll();
             echo json_encode($result); 
 
-        } else {
+        }else if($_GET['endpoint'] == 'getSpecific') {
+
+            include('./../Handlers/categoryHandler.php');
+            $result = getSpecific($_GET['category']);
+            echo json_encode($result); 
+
+        }else {
             throw new Exception('Not a valid endpoint', 501);
         }
 

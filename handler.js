@@ -14,6 +14,7 @@ function makeRequest(url, method, FormData, callback) {
 }
 
 export function getAllProducts() {
+    
     makeRequest('./API/recievers/productReciever.php?endpoint=getAll', 'GET', null, (result) => {
         
     })
@@ -32,22 +33,22 @@ function getAllOrder() {
 }
 
 function getAllCategory() {
-    makeRequest('./API/recievers/categoryReciever.php?endpoint=getAll', 'GET', null, (result) => {
+    var category = this.innerHTML;
+    makeRequest('./API/recievers/categoryReciever.php?endpoint=getSpecific&category=' + category , 'GET', null, (result) => {
         console.log(result)
-    })
-}
-document.getElementById("login_btn").addEventListener("click", getSpecificUser);
+        
 
-/* getAllCategory();
-getAllOrder();
+    })
+    console.log(this.innerHTML)
+}
+document.getElementById("menShoes").addEventListener("click", getAllCategory);
+document.getElementById("womenShoes").addEventListener("click", getAllCategory)
+// document.getElementById("login_btn").addEventListener("click", getSpecificUser);
+
+getAllCategory();
+/*  getAllOrder();
 getAllUser();
 getAllProducts(); */
-
-
-// Funktion för att komma till startsidan från inloggningssidan
-function toIndex() {
-    window.location = "index.php"
-}
 
 
 
