@@ -24,7 +24,7 @@ try {
         }else if($_GET['endpoint'] == 'getSpecific') {
 
             include('./../Handlers/categoryHandler.php');
-            $result = getSpecific($_GET['category']);
+            $result = getSpecific($_GET['categorytoSend']);
             echo json_encode($result); 
 
         }else {
