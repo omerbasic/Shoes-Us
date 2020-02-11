@@ -34,7 +34,12 @@ function getAllOrder() {
 
 function getAllCategory() {
     var category = this.innerHTML;
-    makeRequest('./API/recievers/categoryReciever.php?endpoint=getSpecific&category=' + category , 'GET', null, (result) => {
+    if (category == "Herr"){
+        var categorytoSend = 1;
+    } else if (category == "Dam") {
+       var categorytoSend = 2;
+    }
+    makeRequest('./API/recievers/categoryReciever.php?endpoint=getSpecific&categorytoSend=' + categorytoSend , 'GET', null, (result) => {
         console.log(result)
         
 
