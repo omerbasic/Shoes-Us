@@ -4,11 +4,32 @@ try {
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        if($_POST['endpoint'] == 'add') {
+        if($_POST['endpoint'] == 'add') {   // login
 
             include('./../Handlers/userHandler.php');
             $result = getAll();
             echo json_encode($result); 
+
+        } else if($_POST['endpoint'] == 'addNew') {  
+            
+            if (
+                isset($_POST["fName"]) && 
+                isset($_POST["lName"]) &&
+                isset($_POST["email"]) &&
+                isset($_POST["street"]) &&
+                isset($_POST["city"]) &&
+                isset($_POST["postalcode"]) &&
+                isset($_POST["country"]) &&
+                isset($_POST["phone"])) {
+                    include('./../Handlers/userHandler.php');
+                    include('./../Class/userClass.php');
+
+                    $user = new User($fName, $lName, $email, $street, $city, $postalcode, $country, $phone);
+
+                    $result = registerNewUser($user);
+                    echo json_encode($result); 
+            }
+
 
         } else {
             throw new Exception('Not a valid endpoint', 501);

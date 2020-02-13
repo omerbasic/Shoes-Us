@@ -105,7 +105,7 @@
         </div>
 
         <div class="checkOutForm">
-        <form action="userClass.php" method="post">
+        <form action=".php" method="post">
             <fieldset id="userData">
             Förenamn: <input type="text" name="fName" value="..." id="fName"><br>
             Efteramn: <input type="text" name="lName" value="..." id="lName"><br>

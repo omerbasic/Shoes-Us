@@ -2,7 +2,7 @@
 function makeRequest(url, method, FormData, callback) 
 
 
-
+/*
 export function makePurchase() {
     var fName = document.getElementById("fName").value
     var lName = document.getElementById("lName").value
@@ -39,4 +39,4 @@ export function makePurchase() {
             console.log("Error: ", err)
         })
     }
-
+*/
