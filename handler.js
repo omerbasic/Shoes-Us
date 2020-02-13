@@ -1,4 +1,5 @@
 import { getSpecificUser } from './Resources/userResource.js'
+import { getAllCategory } from './Resources/productResource.js'
 
 function makeRequest(url, method, FormData, callback) {
     fetch(url, {
@@ -32,25 +33,12 @@ function getAllOrder() {
     })
 }
 
-function getAllCategory() {
-    var category = this.innerHTML;
-    if (category == "Herr"){
-        var categorytoSend = 1;
-    } else if (category == "Dam") {
-       var categorytoSend = 2;
-    }
-    makeRequest('./API/recievers/categoryReciever.php?endpoint=getSpecific&categorytoSend=' + categorytoSend , 'GET', null, (result) => {
-        console.log(result)
-        
 
-    })
-    console.log(this.innerHTML)
-}
 document.getElementById("menShoes").addEventListener("click", getAllCategory);
 document.getElementById("womenShoes").addEventListener("click", getAllCategory)
 // document.getElementById("login_btn").addEventListener("click", getSpecificUser);
 
-getAllCategory();
+
 /*  getAllOrder();
 getAllUser();
 getAllProducts(); */
