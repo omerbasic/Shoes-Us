@@ -26,6 +26,7 @@ export function makePurchase() {
     formData.append("phone", phone)
     formData.append("email", email)
 
+    console.log(fName, lName, street, city, postalcode, country, phone, email)
 
         fetch(url, {
             method: method,

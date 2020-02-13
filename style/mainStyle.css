@@ -231,7 +231,7 @@ footer {
 /* IPAD PRO */
 @media only screen and (max-width: 1024px) {
     nav {
-        margin-top: 22%;
+        margin-top: 10%;
     }
 
     .article {
@@ -250,7 +250,7 @@ footer {
     }
 
     nav {
-        margin-top: 22%;
+        margin-top: 12%;
     }
 
     .article {

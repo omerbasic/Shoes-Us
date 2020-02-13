@@ -105,7 +105,7 @@
         </div>
 
         <div class="checkOutForm">
-        <form action="" method="post">
+        <form action="userClass.php" method="post">
             <fieldset id="userData">
             Förenamn: <input type="text" name="fName" value="..." id="fName"><br>
             Efteramn: <input type="text" name="lName" value="..." id="lName"><br>
@@ -120,6 +120,7 @@
         </form>
 
         <form action="" method="get">
+            <h3 style="text-align:center">Välj din fraktalternativ:</h3>
             <fieldset id="shippers">
             <input type="radio" name="shipper" value="GreenShipper" checked> GreenShipper <br>
             <input type="radio" name="shipper" value="BlackShipper"> BlackShipper <br>

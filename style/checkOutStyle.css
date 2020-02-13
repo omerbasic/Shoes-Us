@@ -7,3 +7,16 @@ h1 {
     font-size: xx-large;
     color: red;
 }
+
+#userData {
+    padding: 40px;
+    text-align: center;
+}
+
+input[type=text] {
+    margin: 5px;
+}
+
+#shippers {
+    text-align: center;
+}
