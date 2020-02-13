@@ -1,3 +1,6 @@
+<?php 
+include('./API/Handlers/imageHandler.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +19,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Link to the handler.js -->
     <script defer type="module" src="./handler.js"></script>
+
 </head>
 <body>
 <header>
@@ -94,8 +98,9 @@
             <a href="menShoes.php"><img src="./img/herrskor.jpg" alt="MenShoes" href="menShoes.php" id="herrBild"></a>
         </div>
     </div>
-    
-    
+
+    <div id="allProducts"></div>
+
     <footer>
         <br> <br>
     <div class="newsletterField">
