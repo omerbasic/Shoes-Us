@@ -334,7 +334,11 @@ footer {
 .productDiv {
     margin: 20px;
     padding: 10px;
+}
 
+.productImage {
+    width: 70px;
+    height: 50px;
 }
 
 /* Styling för knappen att lägga till en produkt i kundvagnen */
