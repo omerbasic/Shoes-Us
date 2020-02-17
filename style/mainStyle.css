@@ -41,7 +41,7 @@ nav {
     height: auto;
     background-color: #E1F4F3;
     margin: 0;
-    margin-top: 8%;
+    margin-top: 8;
     position: fixed;
 }
 
@@ -324,4 +324,30 @@ footer {
     }
 
    
+}
+
+#allProducts {
+    display: flex;
+    justify-content: center;
+}
+
+.productDiv {
+    margin: 20px;
+    padding: 10px;
+
+}
+
+/* Styling för knappen att lägga till en produkt i kundvagnen */
+.addToCartBtn {
+    background-color: #333333;
+    color: white;
+    outline-style: none;
+    width: 80px;
+    height: 30px;
+}
+
+.fa-cart-arrow-down {
+    font-size: 13px;
+    color: white;
+    padding-left: 10px;
 }
