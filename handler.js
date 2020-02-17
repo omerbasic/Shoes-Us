@@ -38,4 +38,4 @@ function getAllOrder() {
 document.getElementById("menShoes").addEventListener("click", getAllCategory);
 document.getElementById("womenShoes").addEventListener("click", getAllCategory)
 // document.getElementById("login_btn").addEventListener("click", getSpecificUser);
-document.getElementById("newsLetterBtn").addEventListener("click", sendNewsLetter)
+document.getElementById("newsletter-form").addEventListener("submit", sendNewsLetter)

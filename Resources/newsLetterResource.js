@@ -12,15 +12,11 @@ function makeRequest(url, method, FormData, callback) {
 }
 
 
-export function sendNewsLetter(){
-    var nlemail = document.getElementById("newsletterEmail").value
-    var nlfName = document.getElementById("newsletterfName").value
-    var nllName = document.getElementById("newsletterlName").value
-    FormData = new FormData();
-    FormData.set("Email", nlemail)
-    FormData.append("fName", nlfName)
-    FormData.append("lName", nllName)
-    makeRequest('./../API/recievers/newsletterReciever.php', 'POST', FormData, (result) => {
+export function sendNewsLetter(event) {
+    event.preventDefault()
+    const formData = new FormData(event.target);
+
+    makeRequest('./../API/recievers/newsletterReciever.php', 'POST', formData, (result) => {
         console.log(result)
     })
 }

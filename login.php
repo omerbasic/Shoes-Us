@@ -97,14 +97,19 @@
     
     <footer>
         <br> <br>
-    <div class="newsletterField">
+    <form class="newsletterField" id ="newsletter-form">
         Prenumerera på vårt nyhetsbrev: 
         <br>
-        Email <input type="text" id="newsletterEmail">
-        Förnamn <input type="text" id="newsletterfName">
-        Efternamn <input type="text" id="newsletterlName">
-        <button id="newsLetterBtn">Skicka</button>
-    </div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        
+        <label for="firstname">Förnamn</label>
+        <input type="text" name="firstname" id="firstname">
+        
+        <label for="lastname">Efternamn</label>
+        <input type="text" name="lastname" id="lastname">
+        <button type="submit" id="newsLetterBtn">Skicka</button>
+    </form>
     <br> <hr> 
     <div class="footWrap">
         

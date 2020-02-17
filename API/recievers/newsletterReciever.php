@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     
 
         include('./../Handlers/newsletterHandler.php');
-        $result = postNewsletter($_POST['Email'], $_POST['fName'], $_POST['lName']);
+        $result = postNewsletter($_POST['email'], $_POST['firstname'], $_POST['lastname']);
         echo json_encode($result); 
 
     
