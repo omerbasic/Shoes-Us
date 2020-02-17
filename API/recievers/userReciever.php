@@ -4,31 +4,43 @@ try {
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        if($_POST['endpoint'] == 'add') {   // login
+        if(isset($_POST['endpoint']) && $_POST['endpoint'] == 'add') {   // login
 
             include('./../Handlers/userHandler.php');
             $result = getAll();
             echo json_encode($result); 
 
-        } else if($_POST['endpoint'] == 'addNew') {    // registration new user
+        } else if(isset($_POST['endpoint']) && $_POST['endpoint'] == 'addNew') {    // registration new user
             
             if (
                 isset($_POST["fName"]) && 
                 isset($_POST["lName"]) &&
                 isset($_POST["email"]) &&
-                isset($_POST["street"]) &&
+                isset($_POST["phone"]) &&
+                isset($_POST["password"]) &&
                 isset($_POST["city"]) &&
                 isset($_POST["postalcode"]) &&
                 isset($_POST["country"]) &&
-                isset($_POST["phone"])) {
+                isset($_POST["street"])) {
                     include('./../Handlers/userHandler.php');
-                   // include('./../Class/userClass.php');
+                    // include('./../Class/userClass.php');
 
-                    $user = new User($fName, $lName, $email, $street, $city, $postalcode, $country, $phone);
+                    // $user = new User($fName, $lName, $email, $street, $city, $postalcode, $country, $phone);
 
-                    $result = registerNewUser($user);
+                    $result = registerNewUser(
+                        $_POST["fName"],
+                        $_POST["lName"],
+                        $_POST["email"],
+                        $_POST["phone"],
+                        $_POST["password"],
+                        $_POST["city"],
+                        $_POST["postalcode"],
+                        $_POST["country"],
+                        $_POST["street"]
+                    );
+
                     echo json_encode($result); 
-                    echo ($user);
+                    echo ($result);
             }
 
 

@@ -115,6 +115,7 @@
             Land: <input type="text" name="country" value="..." id="country"><br>
             Telefonnummer: <input type="text" name="phone" value="..." id="phone"><br>
             Postadress: <input type="text" name="email" value="..." id="email"><br>
+            Lösenord: <input type="text" name="password" value="1234" id="password"><br> 
             <input type="submit" value="Submit" id="checkOutSubmit">
             </fieldset>
         </form>

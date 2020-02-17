@@ -34,24 +34,27 @@ function getSpecific($uname, $pw){
 }
 
 
-function registerNewUser($user){
-    include_once('./../Class/userClass.php');
+function registerNewUser($fName, $lName, $email, $phone, $password, $city, $postalcode, $country, $street){
+    // include_once('./../Class/userClass.php');
     include_once('./../Class/database.php');
     $database = new Database();
 
     try {
-        $userArray = array();
 
-        var_dump($user, $userArray);
+        $database->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // $conn = new PDO($pdo_dsn, $pdo_user, $pdo_password);      // ansluter till databas
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $qry = $database->connection->prepare('INSERT INTO user (fName, lName, email, phone, password, isAdmin, city, postalcode, country, street) 
+                                VALUES (:fName, :lName, :email, :phone, :password, 0, :city, :postalcode, :country, :street)');
 
-        $qry=$conn->prepare('INSERT INTO user (fName, lName, email, phone, city, postalcode, country, street) 
-                                VALUES (:fname, :lname, :email, :phone, :city, :postalcode, :country, :street)');
-
-        $qry->execute(array(':fName' => $fName, ':lName' => $lName, ':email' => $email, ':phone' => $phone, 
-                            ':city' => $city, ':postalcode' => $postalcode, ':country' => $country, ':street' => $street));
+        $qry->execute(array(':fName' => $fName, 
+                            ':lName' => $lName,     
+                            ':email' => $email, 
+                            ':phone' => $phone, 
+                            ':password' => $password, 
+                            ':city' => $city, 
+                            ':postalcode' => $postalcode, 
+                            ':country' => $country, 
+                            ':street' => $street));
 
         echo "New user inserted in database";
         
