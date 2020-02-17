@@ -25,12 +25,6 @@ function getAllUser() {
     })
 }
 
-function getAllOrder() {
-    makeRequest('./API/recievers/orderReciever.php?endpoint=getAll', 'GET', null, (result) => {
-        console.log(result)
-    })
-}
-
 function getAllCategory() {
     makeRequest('./API/recievers/categoryReciever.php?endpoint=getAll', 'GET', null, (result) => {
         console.log(result)

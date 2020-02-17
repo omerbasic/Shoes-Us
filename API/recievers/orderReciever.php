@@ -1,8 +1,13 @@
 <?php
+session_start();
 
 try {
+    if (!isset($_SESSION['user'])) {
+        throw new Exception('Not authorized', 403);
+    }
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    else if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if($_POST['endpoint'] == 'add') {
 
@@ -18,7 +23,8 @@ try {
         if($_GET['endpoint'] == 'getAll') {
 
             include('./../Handlers/orderHandler.php');
-            $result = getAll();
+            $user = $_SESSION['user'];
+            $result = getAll($user);
             echo json_encode($result); 
 
         } else {
