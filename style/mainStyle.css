@@ -30,81 +30,29 @@ html, body {
 }
 
 header {
-    position: fixed;
+    
 }
 
           /*  NAVBAR   */
 
 nav {
-    
+    display:flex;
     width: 100vw;
     height: auto;
     background-color: #E1F4F3;
     margin: 0;
     margin-top: 8;
-    position: fixed;
-}
-
-.largeScreenMenu {
-    display: flex;
     
 }
 
 .manWomanField {
-    display: flex;
     justify-content: flex-start;
-    flex-wrap: nowrap;
-    width: 80%;
-    align-items: center; 
-  
-
 }
 
-.manWomanField > #herr {
-    margin-left: 40px;
-}
-
-.manWomanField > #dam {
-    margin-left: 200px;
-}
-
-#dropdownMenuLink {
-    background-color: #E1F4F3;
-    color: black;
-    border: none;
-}
-
-#dropdownMenuLink:hover {
-    background-color: rgb(73, 67, 67);
-    color: white;
-}
-
-#herr, #dam  {
-    position: absolute !important;
-}
-
-.dropdown-menu {
-    text-align: center;
-}
-
-.categoryListDropDown {
-    color: black;
-    padding: 5px;
-    text-align: center;
-}
-.categoryListDropDown:hover {
-    background-color: rgb(73, 67, 67);
-    color: white;
-    text-decoration: none;
-}
 
     
 .loginCartWrap {                            /* Container for Login, My Page and Cart */
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: -100px;
+   justify-content: flex-end;
     }
 
 .loginCartWrap a, .myPageText a {

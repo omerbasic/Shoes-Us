@@ -1,5 +1,5 @@
 <?php 
-include('./API/Handlers/imageHandler.php');
+//include('./API/Handlers/imageHandler.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,39 +23,30 @@ include('./API/Handlers/imageHandler.php');
 
 </head>
 <body>
-<header>
+
+    <header>
         <div class="headTitle">
             <h1 class="textTitle">Shoes US</h1>
         </div>
     </header>
     
 
-    <nav>        
-
-    <div class="largeScreenMenu">
+    <nav> 
         <div class="manWomanField">
-        <div class="dropdown" id="herr">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                HERR
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <div class="categoryListDropDown" id="menShoes">Herr</div>
-                <div class="categoryListDropDown" id="sale">Rea</div>
+            <div class="dam">
+                <a href="#" id="womenShoes">Dam</a>
             </div>
-        </div>  
 
-        <div class="dropdown" id="dam">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                DAM
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <div class="categoryListDropDown" id="womenShoes">Dam</div>
-                <div class="categoryListDropDown" id="sale">Rea</div>
+            <div class="herr">
+                <a href="#" id="menShoes">Herr</a>
             </div>
-        </div> 
-        </div> 
+
+            <div class="rea">
+                <a href="#" id="sale">Rea</a>
+            </div>
+        </div>
+
+
      
 
         <div class="loginCartWrap">
@@ -71,8 +62,8 @@ include('./API/Handlers/imageHandler.php');
                 <div class="numberOfItemsInCart">(...)</div>
                 <a href="cart.php"><img src="./img/CartIcon.png" style="width:20px;height:auto;text-align:right;"></a>
             </div>
+   
         </div>
-    </div>
     </nav>
    
     <div class="article">
