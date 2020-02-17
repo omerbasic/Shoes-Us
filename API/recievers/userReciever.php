@@ -22,13 +22,13 @@ try {
                 isset($_POST["country"]) &&
                 isset($_POST["phone"])) {
                     include('./../Handlers/userHandler.php');
-                    include('./../Class/userClass.php');
+                   // include('./../Class/userClass.php');
 
                     $user = new User($fName, $lName, $email, $street, $city, $postalcode, $country, $phone);
 
                     $result = registerNewUser($user);
                     echo json_encode($result); 
-                    echo ($userArray);
+                    echo ($user);
             }
 
 
