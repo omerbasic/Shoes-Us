@@ -14,6 +14,7 @@ include('./API/Handlers/imageHandler.php');
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <!-- Link to use Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e8127072bf.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -29,26 +30,24 @@ include('./API/Handlers/imageHandler.php');
     </header>
     
 
-    <nav> 
+    <nav>        
 
-        <div class="mobileScreenMenu">
-            <div class="RespDropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Meny
-                </button>
-
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="sales.php">% REA %</a>
-                    <hr>
-                    <a class="dropdown-item" href="myPage.php">MITT KONTO</a>
-                    <hr>
-                    <a class="dropdown-item" href="login.php">Inloggning</a>
-                    <a class="dropdown-item" href="myPage.php">Mina sidor</a>
-                    <a class="dropdown-item" href="cart.php">Min kundvagn</a>
-                </div>
-            </div>
-        </div>
-        
+    <div class="mobileScreenMenu">
+    <div class="RespDropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Meny
+    </button>
+    
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" id="menShoes">Herr</a>
+    <a class="dropdown-item" id="womenShoes">Dam</a>
+    <a class="dropdown-item" id="sale">Rea</a>
+    <hr>
+    <a class="dropdown-item" href="login.php">Inloggning</a>
+    <a class="dropdown-item" href="cart.php">Min kundvagn</a>
+    </div>
+    </div>
+    </div>
 
     <div class="largeScreenMenu">
         <div class="manWomanField">
@@ -59,6 +58,7 @@ include('./API/Handlers/imageHandler.php');
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <div class="categoryListDropDown" id="menShoes">Herr</div>
+                <div class="categoryListDropDown" id="sale">Rea</div>
             </div>
         </div>  
 
@@ -69,6 +69,7 @@ include('./API/Handlers/imageHandler.php');
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <div class="categoryListDropDown" id="womenShoes">Dam</div>
+                <div class="categoryListDropDown" id="sale">Rea</div>
             </div>
         </div> 
         </div> 
@@ -92,14 +93,15 @@ include('./API/Handlers/imageHandler.php');
     </nav>
    
     <div class="article">
-        <a href="sales.php"><img src="./img/reklam.jpg" alt="Rea" id="reaBild"></a>
+        
+    </div>
+
+    <div id="allProducts">
         <div class="menFemImg">
             <a href="femShoes.php"><img src="./img/damskor.jpg" alt="FemShoes" id="damBild"></a>
             <a href="menShoes.php"><img src="./img/herrskor.jpg" alt="MenShoes" href="menShoes.php" id="herrBild"></a>
         </div>
     </div>
-
-    <div id="allProducts"></div>
 
     <footer>
         <br> <br>
