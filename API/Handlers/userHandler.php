@@ -38,6 +38,7 @@ function registerNewUser($fName, $lName, $email, $phone, $password, $city, $post
     // include_once('./../Class/userClass.php');
     include_once('./../Class/database.php');
     $database = new Database();
+    $hashedpass = hash("md5", $password);
 
     try {
 
@@ -50,7 +51,7 @@ function registerNewUser($fName, $lName, $email, $phone, $password, $city, $post
                             ':lName' => $lName,     
                             ':email' => $email, 
                             ':phone' => $phone, 
-                            ':password' => $password, 
+                            ':password' => $hashedpass, 
                             ':city' => $city, 
                             ':postalcode' => $postalcode, 
                             ':country' => $country, 
