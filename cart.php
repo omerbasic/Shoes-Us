@@ -17,7 +17,7 @@
 <body>
 <header>
         <div class="headTitle">
-            <h1 class="textTitle" onclick="toIndex()">Shoes US</h1>
+            <h1 class="textTitle">Shoes US</h1>
         </div>
     </header>
     
@@ -47,11 +47,7 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="categoryListDropDown" href="menShoes.php">HERR (Alla)</a> <br>
-                <hr>
-                <a class="categoryListDropDown" href="#">Boots</a> <br>
-                <a class="categoryListDropDown" href="#">Sneakers</a> <br>
-                <a class="categoryListDropDown" href="#">Lågskor</a> 
+                <div class="categoryListDropDown" id="menShoes">Herr</div> <br>
             </div>
         </div>  
 
@@ -61,13 +57,7 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="categoryListDropDown" href="femShoes.php">DAM (Alla)</a> <br>
-                <hr>
-                <a class="categoryListDropDown" href="#">Boots</a> <br>
-                <a class="categoryListDropDown" href="#">Sneakers</a> <br>
-                <a class="categoryListDropDown" href="#">Lågskor</a> <br>
-                <a class="categoryListDropDown" href="#">Pumps</a> <br>
-                <a class="categoryListDropDown" href="#">Stövlar</a> 
+                <div class="categoryListDropDown" id="womenShoes">Dam</div> <br>
             </div>
         </div> 
         </div> 
