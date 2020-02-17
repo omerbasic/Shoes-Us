@@ -98,8 +98,12 @@
     <footer>
         <br> <br>
     <div class="newsletterField">
-        Prenumerera på vårt nyhetsbrev: <input type="text" class="newsletterInput" value="Din e-postadress...">
-        <button class="sendBtn">Skicka</button>
+        Prenumerera på vårt nyhetsbrev: 
+        <br>
+        Email <input type="text" id="newsletterEmail">
+        Förnamn <input type="text" id="newsletterfName">
+        Efternamn <input type="text" id="newsletterlName">
+        <button id="newsLetterBtn">Skicka</button>
     </div>
     <br> <hr> 
     <div class="footWrap">
