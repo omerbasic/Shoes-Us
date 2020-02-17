@@ -64,10 +64,19 @@
     
     <footer>
         <br> <br>
-    <div class="newsletterField">
-        Prenumerera på vårt nyhetsbrev: <input type="text" class="newsletterInput" value="Din e-postadress...">
-        <button class="sendBtn">Skicka</button>
-    </div>
+    <form class="newsletterField" id ="newsletter-form">
+        Prenumerera på vårt nyhetsbrev: 
+        <br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        
+        <label for="firstname">Förnamn</label>
+        <input type="text" name="firstname" id="firstname">
+        
+        <label for="lastname">Efternamn</label>
+        <input type="text" name="lastname" id="lastname">
+        <button type="submit" id="newsLetterBtn">Skicka</button>
+    </form>
     <br> <hr> 
     <div class="footWrap">
         
