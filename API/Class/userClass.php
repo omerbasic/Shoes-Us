@@ -1,14 +1,14 @@
 <?php 
 
 class User {
-    private $fName;
-    private $lName;
-    private $email;
-    private $phone;
-    private $city;
-    private $postalcode;
-    private $country;
-    private $street;
+    public $fName;
+    public $lName;
+    public $email;
+    public $phone;
+    public $city;
+    public $postalcode;
+    public $country;
+    public $street;
 
     function __construct($fName, $lName, $email, $phone, $city, $postalcode, $country, $street)
     {
@@ -21,6 +21,10 @@ class User {
         $this->country = $country;
         $this->street = $street;
     }
-}
+
+   
+};
+
+$userArray = array($fName, $lName, $email, $phone, $city, $postalcode, $country, $street);
 
 ?>

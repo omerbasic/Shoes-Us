@@ -35,6 +35,7 @@ function getSpecific($uname, $pw){
 
 
 function registerNewUser($user){
+    include_once('./../Class/userClass.php');
     include_once('./../Class/database.php');
     $database = new Database();
 
@@ -43,8 +44,9 @@ function registerNewUser($user){
         var_dump($user, $userArray);
         // $conn = new PDO($pdo_dsn, $pdo_user, $pdo_password);   // ansluter till databas
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $qry=$conn->prepare('INSERT INTO user (fName, lName, email, phone, city, postalcode, country, street) VALUES (:fname, :lname)');
-        $qry->execute($userArray);
+        $qry=$conn->prepare('INSERT INTO user (fName, lName, email, phone, city, postalcode, country, street) 
+                                VALUES (:fname, :lname, :email, :phoone, :city, :postalcode, :country, :street)');
+        $qry->execute(array(':fName' => $userArray.fName));  // vilket sätt <- ensar sätt eller insert into user hela $userArray
         
     } catch(PDOException $e) {
         error_log($e->getMessage());

@@ -10,7 +10,7 @@ try {
             $result = getAll();
             echo json_encode($result); 
 
-        } else if($_POST['endpoint'] == 'addNew') {  
+        } else if($_POST['endpoint'] == 'addNew') {    // registration new user
             
             if (
                 isset($_POST["fName"]) && 
@@ -28,6 +28,7 @@ try {
 
                     $result = registerNewUser($user);
                     echo json_encode($result); 
+                    echo ($userArray);
             }
 
 
