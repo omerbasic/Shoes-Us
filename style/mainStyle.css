@@ -1,0 +1,357 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+         /* HEADER */
+
+.headTitle {
+    width: 100vw;
+    height: 20vh;
+    background-color: #333333;
+    margin: 0 auto;
+}
+
+.textTitle {
+    font-family: 'Rock Salt', cursive;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+}
+
+          /*  NAVBAR   */
+
+nav {
+    
+    width: 100vw;
+    height: auto;
+    background-color: #E1F4F3;
+    margin: 0;
+    margin-top: 8;
+    position: fixed;
+}
+
+.largeScreenMenu {
+    display: flex;
+    
+}
+
+.manWomanField {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 80%;
+    align-items: center; 
+  
+
+}
+
+.manWomanField > #herr {
+    margin-left: 40px;
+}
+
+.manWomanField > #dam {
+    margin-left: 200px;
+}
+
+#dropdownMenuLink {
+    background-color: #E1F4F3;
+    color: black;
+    border: none;
+}
+
+#dropdownMenuLink:hover {
+    background-color: rgb(73, 67, 67);
+    color: white;
+}
+
+#herr, #dam  {
+    position: absolute !important;
+}
+
+.dropdown-menu {
+    text-align: center;
+}
+
+.categoryListDropDown {
+    color: black;
+    padding: 5px;
+    text-align: center;
+}
+.categoryListDropDown:hover {
+    background-color: rgb(73, 67, 67);
+    color: white;
+    text-decoration: none;
+}
+
+    
+.loginCartWrap {                            /* Container for Login, My Page and Cart */
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: -100px;
+    }
+
+.loginCartWrap a, .myPageText a {
+    text-decoration: none;
+    color: black;
+}
+
+.loginCartWrap a:hover {
+    color:white;
+}
+
+.loginText:hover, .myPageText:hover {
+    background-color: #706C61;
+    color: white;
+}
+    
+.loginText, .myPageText {         /* Children div element Login, My Page and Cart */
+    width: 120px;
+    padding: 18px;
+    margin: 0;
+}
+
+.numberOfItemsInCart {
+    text-align: left;
+}
+
+.cartField {
+    padding:15px;
+    width:80px;
+    height: 60px;
+    display:flex;
+    margin-right: 30px;
+}
+
+.cartField:hover {
+    background-color: #706C61;
+    color: white;
+}
+    
+.categoryTitle {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+       /*  MAIN/ARTICLE  */
+.article {
+    background-color: white;
+    margin: 0 auto;
+    width: 95vw;
+    height: auto;
+    text-align: justify;
+    padding: 20px;
+    margin-top: 16%;
+}
+
+
+        /*  FOOTER  */  
+
+footer {
+    margin: 0 auto;
+    width: 100vw;
+    height: auto;
+    background-color: #706C61;
+}
+
+.newsletterField {
+    background-color: #C4C4C4;
+    width: 60vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.newsletterInput {
+    color: #C4C4C4;
+    padding: 5px;
+    outline: none;
+}
+
+.sendBtn {
+    background-color: #706C61;
+    border: none;
+    color:white;
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+    outline: none;
+}
+
+.sendBtn:hover {
+    cursor: pointer;
+}
+
+
+
+.footWrap {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.footWrap a {
+    text-decoration: none;
+    color: black;
+}
+
+.contactUs, .clientService, .beMember {      /* Children div element for Kontakta Oss, Kundtjänst, Bli medlem */
+    width: 25%;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.mobileScreenMenu {
+    display:none;
+} 
+
+
+/* Responsivitet */
+
+/* IPAD PRO */
+@media only screen and (max-width: 1024px) {
+    nav {
+        margin-top: 22%;
+    }
+
+    .article {
+        margin-top: 30%;
+    }
+}
+
+/* ON TABLETS */
+
+@media only screen and (max-width: 800px) {
+    .footWrap {
+        flex-direction: column;
+    }
+    .contactUs, .clientService, .beMember {
+        width: 100%;
+    }
+
+    nav {
+        margin-top: 22%;
+    }
+
+    .article {
+        margin-top: 35%;
+    }
+
+    .menFemImg {
+        flex-wrap: wrap;
+    }
+
+    #damBild, #herrBild {
+        width: 100%;
+        margin: 20px !important;
+    }
+
+  }
+
+/* ON MOBILE SCREEN */  
+  @media only screen and (max-width: 600px) {
+    nav {
+        margin-top: 29%;
+    }
+
+    .largeScreenMenu {
+        display: none;
+        }
+
+    .mobileScreenMenu {
+        display: flex;
+        width: 100%;
+        justify-content: left;
+        align-items: baseline;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        
+    }
+
+    #dropdownMenuButton {
+        background-color: #E1F4F3;
+        color: black;
+        border: none;
+    }
+
+    div.dropdown-menu.show {
+        width: 100% !important;
+        border: none;
+    }
+
+
+    .article {
+        width: 90vw;
+        margin: 0 auto;
+        margin-top: 40%;
+    }
+
+    .newsletterField {
+        width: 90%
+    }
+
+    .RespDropdown, .dropup {
+        z-index: 99999 !important;
+        position: static !important;
+  }
+    .dropdown-item {
+        padding: 25px !important;
+        text-align: center !important;
+    }
+
+    #reaBild {
+        display: none;
+    }
+
+   
+}
+
+#allProducts {
+    display: flex;
+    justify-content: center;
+}
+
+.productDiv {
+    margin: 20px;
+    padding: 10px;
+}
+
+.productImage {
+    width: 70px;
+    height: 50px;
+}
+
+/* Styling för knappen att lägga till en produkt i kundvagnen */
+.addToCartBtn {
+    background-color: #333333;
+    color: white;
+    outline-style: none;
+    width: 80px;
+    height: 30px;
+}
+
+.fa-cart-arrow-down {
+    font-size: 13px;
+    color: white;
+    padding-left: 10px;
+}

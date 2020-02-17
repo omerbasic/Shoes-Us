@@ -1,0 +1,11 @@
+
+.menFemImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#damBild, #herrBild {
+    width: 300px;
+    margin: 10px;
+}
