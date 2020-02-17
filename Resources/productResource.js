@@ -76,5 +76,5 @@ const inCart = [/* {
 function saveToLocalStorage(inCart) {
     /* Spara kundvagnen till localstorage */
     localStorage.setItem('cart', JSON.stringify(inCart))
-
 }
+
