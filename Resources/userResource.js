@@ -37,21 +37,18 @@ export function registerNewUser() {
     var phone = document.getElementById("phone").value
     var email = document.getElementById("email").value
 
-    let url = './../API/recievers/purchaseReciever.php'
-    let method = "POST"
+    FormData = new FormData()
+    FormData.append("fName", fName)
+    FormData.append("lName", lName)
+    FormData.append("street", street)
+    FormData.append("city", city)
+    FormData.append("postalcode", postalcode)
+    FormData.append("country", country)
+    FormData.append("phone", phone)
+    FormData.append("email", email)
 
-    formData = new FormData()
-    formData.append("fName", fName)
-    formData.append("lName", lName)
-    formData.append("street", street)
-    formData.append("city", city)
-    formData.append("postalcode", postalcode)
-    formData.append("country", country)
-    formData.append("phone", phone)
-    formData.append("email", email)
-
-    makeRequest('./../API/recievers/userReciever.php', "POST", formData, (result) => {
-
+    makeRequest('./../API/recievers/userReciever.php?endpoint=addNew', 'POST', FormData, (result) => {
+            console.log(result);
     })
 }
 

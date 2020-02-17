@@ -1,3 +1,3 @@
-import { makePurchase } from './Resources/checkOutResource.js'
+import { registerNewUser } from './Resources/userResource.js'
 
-document.getElementById("checkOutSubmit").addEventListener("click", makePurchase)
+document.getElementById("checkOutSubmit").addEventListener("click", registerNewUser)
