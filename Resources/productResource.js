@@ -31,7 +31,7 @@ export function getAllCategory() {
             productDiv.classList = "productDiv"
 
             var image = document.createElement("img") // Produktbilden
-            image.setAttribute("src", "./img/products" + selectedProduct.img_path)
+            image.setAttribute("src", "./img/products/" + selectedProduct.img_path)
             image.classList = "productImage"
 
             var cartIcon = document.createElement("i") // Kundvagns-ikon i knappen

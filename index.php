@@ -32,23 +32,6 @@ include('./API/Handlers/imageHandler.php');
 
     <nav>        
 
-    <div class="mobileScreenMenu">
-    <div class="RespDropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Meny
-    </button>
-    
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" id="menShoes">Herr</a>
-    <a class="dropdown-item" id="womenShoes">Dam</a>
-    <a class="dropdown-item" id="sale">Rea</a>
-    <hr>
-    <a class="dropdown-item" href="login.php">Inloggning</a>
-    <a class="dropdown-item" href="cart.php">Min kundvagn</a>
-    </div>
-    </div>
-    </div>
-
     <div class="largeScreenMenu">
         <div class="manWomanField">
         <div class="dropdown" id="herr">
