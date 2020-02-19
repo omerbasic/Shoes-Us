@@ -110,7 +110,6 @@ nav {
     height: auto;
     text-align: justify;
     padding: 20px;
-    margin-top: 16%;
 }
 
 
@@ -185,6 +184,12 @@ footer {
 .productDiv {
     margin: 20px;
     padding: 10px;
+}
+
+.productImage {
+    width: 70px;
+    height: 50px;
+}
 
 
 
@@ -271,7 +276,5 @@ footer {
    
 }
 
-.productImage {
-    width: 70px;
-    height: 50px;
-}
+
+
