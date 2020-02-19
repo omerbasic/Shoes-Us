@@ -47,6 +47,9 @@
 
     <div id="productsInCart"></div>
     
+    <div id="goToCheckout" style="text-align: center;">
+                <a href="./checkOut.php">Gå till checkOut --></a>
+            </div>
     
     <footer>
         <br> <br>

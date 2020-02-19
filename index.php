@@ -62,7 +62,8 @@
    
             <div id="allProducts">
                 
-            </div>    
+            </div> 
+            
         
 
     <footer>
