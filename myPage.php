@@ -96,12 +96,11 @@
     </nav>
    
     <div class="article">
-      <h1 style="color: #333333;">Mina beställningar</h1>
+      <h1 class="minaBeställningar" style="color: #333333;">Mina beställningar</h1>
     </div>
     
     <div class="MainOrderDiv">
-        <div class="orderDiv">
-        </div>
+        
     </div>
 
     
