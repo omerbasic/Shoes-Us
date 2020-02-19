@@ -186,7 +186,7 @@ footer {
     margin: 20px;
     padding: 10px;
 
-}
+
 
 /* Styling för knappen att lägga till en produkt i kundvagnen */
 .addToCartBtn {
@@ -230,9 +230,15 @@ footer {
         padding-right: 0px;
     }
 
+
+    nav {
+      margin-top: 12%;
+  }
+  
     /* Footer */
     .footWrap {
         flex-direction: column;
+
     }
     .contactUs, .clientService, .beMember {
         width: 100%;

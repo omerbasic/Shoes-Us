@@ -38,12 +38,23 @@ function getAllUser() {
     })
 }
 
-function getAllOrder() {
-    makeRequest('./API/recievers/orderReciever.php?endpoint=getAll', 'GET', null, (result) => {
+function getAllCategory() {
+    makeRequest('./API/recievers/categoryReciever.php?endpoint=getAll', 'GET', null, (result) => {
         console.log(result)
     })
 }
+document.getElementById("login_btn").addEventListener("click", getSpecificUser);
 
+/* getAllCategory();
+getAllOrder();
+getAllUser();
+getAllProducts(); */
+
+
+// Funktion för att komma till startsidan från inloggningssidan
+function toIndex() {
+    window.location = "index.php"
+}
 
 document.getElementById("menShoes").addEventListener("click", getAllCategory);
 document.getElementById("womenShoes").addEventListener("click", getAllCategory)

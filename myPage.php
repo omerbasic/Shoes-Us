@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ShoesUs - Hemsida</title> 
     <link rel="stylesheet" href="./style/mainStyle.css">
-    <script src="handler.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+    <script defer type ="module" src="./myPageHandler.js"></script>
+
 </head>
 <body>
 <header>
@@ -51,10 +54,16 @@
         </div>
     </nav>
    
+
     <div class="myPageBody">
       <h1 style="color: #333333; text-align: center;">Mina beställningar</h1>
+
     </div>
     
+    <div class="MainOrderDiv">
+        
+    </div>
+
     
     <footer>
         <br> <br>
