@@ -2,6 +2,16 @@ import { getSpecificUser } from './Resources/userResource.js'
 import { getAllCategory } from './Resources/productResource.js'
 import {sendNewsLetter} from './Resources/newsLetterResource.js'
 
+var iKundvagn = [];
+
+function cartCheck(){
+const inCart = localStorage.localCart;
+if (inCart) {
+    iKundvagn = JSON.parse(inCart);
+}
+}
+cartCheck();
+
 function makeRequest(url, method, FormData, callback) {
     fetch(url, {
         method: method,

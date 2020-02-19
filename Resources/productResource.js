@@ -1,3 +1,8 @@
+function getCart() {
+    return JSON.parse(localStorage.getItem("localCart")) || [];
+  }
+
+var inCart = getCart();
 function makeRequest(url, method, FormData, callback) {
     fetch(url, {
         method: method,
@@ -41,16 +46,11 @@ export function getAllCategory() {
             addToCartBtn.classList = "addToCartBtn"
             // Funktion för att lägga i kundvagnen 
             addToCartBtn.addEventListener("click", function()  { 
-                console.log(inCart)
-                if(inCart) {
-                    // Här finns kundvagnen
-                    inCart.push(selectedProduct)
-                } else {
-                    // Här finns inte kundvagnen
-                    inCart = []
-                    inCart.push(selectedProduct)
-                }
-                saveToLocalStorage(inCart)
+                
+                  
+                saveToLocalStorage(selectedProduct)
+                
+            
             }) 
             const title = document.createElement("p")
             title.innerHTML = selectedProduct.name
@@ -68,13 +68,15 @@ export function getAllCategory() {
     })
 }
 
-const inCart = [/* {
-    product,
-    quantity
-} */]
 
-function saveToLocalStorage(inCart) {
+
+function saveToLocalStorage(selectedProduct) {
     /* Spara kundvagnen till localstorage */
-    localStorage.setItem('cart', JSON.stringify(inCart))
+
+    inCart.push(selectedProduct)
+
+    
+    var json_str = JSON.stringify(inCart);
+    localStorage.localCart = json_str;
 }
 
