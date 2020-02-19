@@ -13,7 +13,7 @@
 <body>
 <header>
         <div class="headTitle">
-            <h1 class="textTitle">Shoes US</h1>
+            <a href="index.php"><h1 class="textTitle">Shoes US</h1></a>
         </div>
     </header>
     

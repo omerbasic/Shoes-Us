@@ -17,11 +17,13 @@ html, body {
     background-color: #333333;
 }
 
+
 .textTitle {
     font-family: 'Rock Salt', cursive;
     color: white;
     padding: 20px;
     margin: 0;
+    text-decoration: none;
 }
 
 

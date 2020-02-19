@@ -14,8 +14,8 @@
 </head>
 <body>
 <header>
-        <div class="headTitle">
-            <h1 class="textTitle">Shoes US</h1>
+    <div class="headTitle">
+            <a href="index.php"><h1 class="textTitle">Shoes US</h1></a>
         </div>
     </header>
     
@@ -46,7 +46,7 @@
     </div>
 
     <div id="productsInCart"></div>
-    
+
     <div id="goToCheckout" style="text-align: center;">
                 <a href="./checkOut.php">Gå till checkOut --></a>
             </div>
