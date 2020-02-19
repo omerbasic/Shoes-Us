@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="./style/indexStyle.css">
     <!-- Link to get th right font -->
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
-    <!-- Link to use Bootstrap -->
-    
-    <!-- Link to the handler.js -->
+   
     <script defer type="module" src="./handler.js"></script>
 
 </head>

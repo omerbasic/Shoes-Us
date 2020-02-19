@@ -38,12 +38,12 @@ function getAllUser() {
     })
 }
 
-function getAllCategory() {
+/* function getAllCategory() {
     makeRequest('./API/recievers/categoryReciever.php?endpoint=getAll', 'GET', null, (result) => {
         console.log(result)
     })
 }
-document.getElementById("login_btn").addEventListener("click", getSpecificUser);
+document.getElementById("login_btn").addEventListener("click", getSpecificUser); */
 
 /* getAllCategory();
 getAllOrder();
