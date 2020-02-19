@@ -7,11 +7,14 @@ try {
     }
 
 
-    else if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    else if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
-        if($_POST['endpoint'] == 'add') {
+        if($_POST['endpoint'] == 'getAll') {
 
-            //här kan du lägga till post eller annan metod
+            include('./../Handlers/orderHandler.php');
+            $user = unserialize($_SESSION['user']);
+            $result = getAll($user);
+            echo json_encode($result); 
 
         } else {
             throw new Exception('Not a valid endpoint', 501);
@@ -23,8 +26,8 @@ try {
         if($_GET['endpoint'] == 'getAll') {
 
             include('./../Handlers/orderHandler.php');
-            $user = $_SESSION['user'];
-            $result = getAll($user);
+            $user = unserialize($_SESSION['loggedInUser'])->userID;
+            $result = getAllFromUser($user);
             echo json_encode($result); 
 
         } else {
