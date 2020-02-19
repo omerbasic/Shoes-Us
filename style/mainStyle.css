@@ -86,13 +86,13 @@ nav {
 
 .myPageText > a, .loginText > a, .cartField > a {
     text-decoration: none;
-    color: #706C61;
+    color: black;
 }
 
 .myPageText:hover, .loginText:hover, .cartField:hover,  #toIndex:hover {
-    color: white;
     background-color: #706C61;
 }
+
 
 .cartField {
     display: inline-flex;
