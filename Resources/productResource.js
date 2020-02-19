@@ -65,9 +65,55 @@ export function getAllCategory() {
             productDiv.append(addToCartBtn)
             showProducts.append(productDiv)            
     }
-    
     })
 }
+
+function showBothMenAndWomen(){
+    makeRequest('./API/recievers/categoryReciever.php?endpoint=getAll', 'GET', null, (result) => {
+    for (let i = 0; i < result.length; i++){
+        const showProducts = document.getElementById("allProducts")
+        showProducts.innerHTML = "" 
+
+        for (let i = 0; i < result.length; i++) {
+            const selectedProduct = result[i]
+            
+            const productDiv = document.createElement("div")
+            productDiv.classList = "productDiv"
+
+            const image = document.createElement("img")
+            image.setAttribute("src", "./img/products/" + selectedProduct.img_path)
+            image.classList = "productImage"
+            // Kundvagns-ikon i knappen
+            const cartIcon = document.createElement("i") 
+            cartIcon.classList = "fas fa-cart-arrow-down"
+            const addToCartBtn = document.createElement("button")
+            addToCartBtn.innerHTML = "Köp"
+            addToCartBtn.classList = "addToCartBtn"
+            // Funktion för att lägga i kundvagnen 
+            addToCartBtn.addEventListener("click", function()  { 
+                
+                  
+                saveToLocalStorage(selectedProduct)
+                numberOfProductsInCart()
+                
+            
+            }) 
+            const title = document.createElement("p")
+            title.innerHTML = selectedProduct.name
+            const price = document.createElement("p") 
+            price.innerHTML = selectedProduct.price + " kr"
+
+            productDiv.append(image)
+            productDiv.append(title)
+            productDiv.append(price)
+            addToCartBtn.appendChild(cartIcon)
+            productDiv.append(addToCartBtn)
+            showProducts.append(productDiv)            
+    }
+    }
+})
+}
+showBothMenAndWomen()
 
 function saveToLocalStorage(selectedProduct) {
     /* Spara kundvagnen till localstorage */
