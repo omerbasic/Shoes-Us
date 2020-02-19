@@ -37,7 +37,7 @@ export function getAllCategory() {
 
             const image = document.createElement("img")
             image.setAttribute("src", "./img/products/" + selectedProduct.img_path)
-            image.id = "productImage"
+            image.classList = "productImage"
             // Kundvagns-ikon i knappen
             const cartIcon = document.createElement("i") 
             cartIcon.classList = "fas fa-cart-arrow-down"
