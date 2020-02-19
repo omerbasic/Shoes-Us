@@ -4,7 +4,6 @@ function getCart() {
 
 function showProductsInCart() {
     
-
     const showCartProducts = document.getElementById("productsInCart")
         showCartProducts.innerHTML = "" 
 
@@ -27,6 +26,11 @@ function showProductsInCart() {
             const deleteProductBtn = document.createElement("button")
             deleteProductBtn.classList = "deleteProductBtn"
             deleteProductBtn.innerHTML = "Ta bort"
+            deleteProductBtn.num = i;
+            deleteProductBtn.addEventListener("click", function(){
+                removeProductFromCart(this.num)
+                numberOfProductsInCart()
+            })
 
             productDiv.append(image)
             productDiv.append(title)
@@ -36,3 +40,18 @@ function showProductsInCart() {
         }
 }
 showProductsInCart()
+
+function removeProductFromCart(title){
+    const cart = JSON.parse(localStorage.getItem("localCart"))
+    var selectedProduct = title;
+    cart.splice(selectedProduct, 1)    
+    localStorage.setItem("localCart", JSON.stringify(cart))
+    showProductsInCart()
+}
+
+function numberOfProductsInCart() {
+    var getCart = JSON.parse(localStorage.getItem("localCart"))
+    var quantity = document.getElementById("numberOfItemsInCart")
+    quantity.innerHTML = getCart.length   
+}
+numberOfProductsInCart()

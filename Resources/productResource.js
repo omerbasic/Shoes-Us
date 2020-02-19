@@ -80,9 +80,9 @@ function saveToLocalStorage(selectedProduct) {
 }
 
 function numberOfProductsInCart() {
-    var cart = JSON.parse(localStorage.getItem("localCart"))
+    var getCart = JSON.parse(localStorage.getItem("localCart"))
     var quantity = document.getElementById("numberOfItemsInCart")
-    quantity.innerHTML = getCart().length   
+    quantity.innerHTML = getCart.length   
 }
 numberOfProductsInCart()
 
