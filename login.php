@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style/mainStyle.css">
     <link rel="stylesheet" href="./style/loginStyle.css">
     <script defer type="module" src="handler.js"></script>
+    <script defer type="module" src="loginHandler.js"></script>
 </head>
 <body>
 <header>
