@@ -7,10 +7,12 @@
     <title>ShoesUs - Hemsida</title> 
     <link rel="stylesheet" href="./style/mainStyle.css">
     <link rel="stylesheet" href="./style/checkOutStyle.css">
+    <link rel="stylesheet" href="./style/shipperStyle.css">
     <!-- Link to get th right font -->
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">    
     <!-- Link to the handler.js -->
     <script defer type ="module" src="./checkOutHandler.js"></script>
+    <script defer type ="module" src="./shippersHandler.js"></script>
 </head>
 <body>
 <header>
@@ -77,12 +79,10 @@
             </fieldset>
         </form>
 
-        <form action="" method="get">
+        <form method="get">
             <h3 style="text-align:center">Välj din fraktalternativ:</h3>
             <fieldset id="shippers">
-            <input type="radio" name="shipper" value="GreenShipper" checked> GreenShipper <br>
-            <input type="radio" name="shipper" value="BlackShipper"> BlackShipper <br>
-            <input type="radio" name="shipper" value="BrownShipper"> BrownShipper <br>
+              <button id="getShippers">Klicka här för att hämta våra fraktalternativ</button>
             </fieldset>
         </form>
         </div>

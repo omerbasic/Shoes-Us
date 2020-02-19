@@ -37,3 +37,4 @@ document.getElementById("womenShoes").addEventListener("click", getAllCategory)
 document.getElementById("womenShoes").addEventListener("click", getAllCategory)
 document.getElementById("newsletter-form").addEventListener("submit", sendNewsLetter)
 
+
