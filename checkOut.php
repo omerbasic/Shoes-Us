@@ -87,12 +87,13 @@
                 
             </div>
                 
-            <form method="get">
-                <h3 style="text-align:center">Välj din fraktalternativ:</h3>
-                <fieldset id="shippers">
-                    <button id="getShippers">Klicka här för att hämta våra fraktalternativ</button>
-                </fieldset>
-            </form>
+           
+            <h3 style="text-align:center">Välj din fraktalternativ:</h3>
+            
+            <div id="shippers">
+                <button id="getShippers">Klicka här för att hämta våra fraktalternativ</button>
+            </div>
+           
                 <button id="checkoutSubmit">Checkout</button>
         </div>
 
