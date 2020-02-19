@@ -182,11 +182,14 @@ footer {
 .productDiv {
     margin: 20px;
     padding: 10px;
+    background-color: #C4C4C4;
+    border-radius: 20px;
+    text-align: center;
 }
 
 .productImage {
-    width: 70px;
-    height: 50px;
+    width: 90px;
+    height: 70px;
 }
 
 
@@ -199,6 +202,8 @@ footer {
     outline-style: none;
     width: 80px;
     height: 30px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .fa-cart-arrow-down {
