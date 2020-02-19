@@ -58,44 +58,66 @@
     </nav>
 
     
-
-        <div class="categoryTitle">
-            <h1>Check out</h1>
+        
+        <div class="categoryTitle">";
+        <h1>Check out</h1>;
         </div>
 
         <div class="checkOutForm">
-        <form method="post">
-            <fieldset id="userData">
-            Förenamn: <input type="text" name="fName" value="..." id="fName"><br>
-            Efteramn: <input type="text" name="lName" value="..." id="lName"><br>
-            Adress: <input type="text" name="street" value="..." id="street"><br>
-            Stad: <input type="text" name="city" value="..." id="city"><br>
-            Postnummer: <input type="text" name="postalcode" value="..." id="postalcode"><br>
-            Land: <input type="text" name="country" value="..." id="country"><br>
-            Telefonnummer: <input type="text" name="phone" value="..." id="phone"><br>
-            Postadress: <input type="text" name="email" value="..." id="email"><br>
-            Lösenord: <input type="text" name="password" value="1234" id="password"><br> 
-            <input type="submit" value="Submit" id="checkOutSubmit">
+            <h3 style="text-align:center">Välj din fraktalternativ:</h3>
+            <fieldset id="shippers">
+              <button id="getShippers">Klicka här för att hämta våra fraktalternativ</button>
             </fieldset>
-        </form>
-
-        <form method="get">
+       		 </form>
+            <div id="checkoutField" id="userData">
+                <h1>Förnamn</h1>
+                <input type="text" id="fName">
+                <h1>Efternamn</h1>
+                <input type="text" id="lName">
+                <h1>Adress</h1>
+                <input type="text" id="street">
+                <h1>Stad</h1>
+                <input type="text" id="city">
+                <h1>Postnummer</h1>
+                <input type="text" id="postalcode">
+                <h1>Land</h1>
+                <input type="text" id="country">
+                <h1>Telefonnummer</h1>
+                <input type="text" id="phone">
+                <h1>Username</h1>
+                <input type="text" id="email">
+                <h1>Password</h1>
+                <input type="password" id="password">
+                
+                
+                <form method="get">
             <h3 style="text-align:center">Välj din fraktalternativ:</h3>
             <fieldset id="shippers">
               <button id="getShippers">Klicka här för att hämta våra fraktalternativ</button>
             </fieldset>
         </form>
+                <button id="checkoutSubmit">Checkout</button>
+            </div>
         </div>
 
     
     
     
     <footer>
-        <br> <br>
-    <div class="newsletterField">
-        Prenumerera på vårt nyhetsbrev: <input type="text" class="newsletterInput" value="Din e-postadress...">
-        <button class="sendBtn">Skicka</button>
-    </div>
+    <br> <br>
+    <form class="newsletterField" id ="newsletter-form">
+        Prenumerera på vårt nyhetsbrev: 
+        <br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        
+        <label for="firstname">Förnamn</label>
+        <input type="text" name="firstname" id="firstname">
+        
+        <label for="lastname">Efternamn</label>
+        <input type="text" name="lastname" id="lastname">
+        <button type="submit" id="newsLetterBtn">Skicka</button>
+    </form>
     <br> <hr> 
     <div class="footWrap">
         

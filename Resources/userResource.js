@@ -13,11 +13,11 @@ function makeRequest(url, method, FormData, callback) {
 
 
 
-export function getSpecificUser(event) {
+export function login(event) {
 
     var username = document.getElementById("usernameInput").value
     var password = document.getElementById("passwordInput").value
-    makeRequest('./../API/recievers/userReciever.php?endpoint=getSpecific&username=' + username + '&password=' + password, 'GET', null, (user) => {
+    makeRequest('./../API/recievers/userReciever.php?endpoint=login&username=' + username + '&password=' + password, 'GET', null, (user) => {
         if (user.status == 404){
             console.log("Det gick inte att logga in!")
         } else {
@@ -27,7 +27,25 @@ export function getSpecificUser(event) {
     })
 }
 
-export function registerNewUser() {
+
+export function getSpecific(event) {
+
+    var username = document.getElementById("usernameInput").value
+    var password = document.getElementById("passwordInput").value
+    makeRequest('./../API/recievers/userReciever.php?endpoint=getSpecific&username=' + username + '&password=' + password, 'GET', null, (user) => {
+        if (user.status == 404){
+            console.log("Det gick inte att logga in!")
+        } else {
+            console.log(user)
+            
+        }
+    })
+}
+//ny registeredUserOrder funktion
+// var fname = getcurrentuser.Fname
+//formdata.append ("fname", fname) -> endpoint userreciever POST
+export function registerNewUser(event) {
+    event.preventDefault()
     var fName = document.getElementById("fName").value
     var lName = document.getElementById("lName").value
     var email = document.getElementById("email").value
@@ -50,10 +68,19 @@ export function registerNewUser() {
     FormData.append("street", street)
     FormData.append("endpoint", "addNew")
 
-    makeRequest('./../API/recievers/userReciever.php', 'POST', FormData, (result) => {
-            console.log(result);
+    makeRequest('./../API/recievers/userReciever.php?endpoint=getSpecific&username=' + email + '&password=' + password, 'GET', null, (user) => {
+        
+            
+            makeRequest('./../API/recievers/userReciever.php', 'POST', FormData, (result) => {
+                    console.log(result);
+            })
+        
     })
+
 }
+
+
+
 
 
 

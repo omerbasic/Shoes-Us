@@ -9,7 +9,7 @@ try {
             include('./../Handlers/userHandler.php');
             $result = getAll();
             echo json_encode($result); 
-
+            //ny eller samma?
         } else if(isset($_POST['endpoint']) && $_POST['endpoint'] == 'addNew') {    // registration new user
             
             if (
@@ -60,10 +60,15 @@ try {
         } else if ($_GET['endpoint'] == 'getSpecific'){
             include('./../Handlers/userHandler.php');
             $result = getSpecific($_GET['username'] , $_GET['password']);
+            echo json_encode($result);
+
+        }else if ($_GET['endpoint'] == 'login'){
+            include('./../Handlers/userHandler.php');
+            $result = login($_GET['username'] , $_GET['password']);
             $_SESSION['user'] = $result['userID'];
             echo json_encode($result);
 
-        } else {
+        }  else {
             throw new Exception('Not a valid endpoint', 501);
         }
 
@@ -74,5 +79,9 @@ try {
 } catch(Exception $e) {
     echo json_encode(array('Message' => $e->getMessage(), 'status' => $e->getCode()));
 }
+
+
+
+
 
 ?>
