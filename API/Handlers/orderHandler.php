@@ -1,6 +1,6 @@
 <?php 
 
-function getAll($user) {
+function getAllFromUser($user) {
     error_log($user);
     include_once('./../Class/database.php');
     $database = new Database();
