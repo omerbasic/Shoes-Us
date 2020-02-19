@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 try {
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -60,6 +60,7 @@ try {
         } else if ($_GET['endpoint'] == 'getSpecific'){
             include('./../Handlers/userHandler.php');
             $result = getSpecific($_GET['username'] , $_GET['password']);
+            $_SESSION['user'] = $result['userID'];
             echo json_encode($result);
 
         } else {
