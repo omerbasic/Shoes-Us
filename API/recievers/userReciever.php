@@ -65,10 +65,19 @@ try {
         }else if ($_GET['endpoint'] == 'login'){
             include('./../Handlers/userHandler.php');
             $result = login($_GET['username'] , $_GET['password']);
-            $_SESSION['user'] = $result['userID'];
             echo json_encode($result);
 
-        }  else {
+        }else if ($_GET['endpoint'] == 'getLoggedInUser'){
+            
+            if (isset($_SESSION['loggedinUser'])){
+                $result = unserialize($_SESSION['loggedinUser']) ;
+                echo json_encode($result);
+            }else{
+                echo json_encode(false);
+            }
+            
+
+        }   else {
             throw new Exception('Not a valid endpoint', 501);
         }
 
