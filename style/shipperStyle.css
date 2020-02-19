@@ -30,3 +30,15 @@
     width: 100%;
     font-size: 1.4em;
 }
+
+@media only screen and (max-width: 800px) {
+    .shipperName {
+        font-size: 1em;
+        width: 90%;
+        background-color: #E1F4F3;
+    }
+
+    .shipperInfo, .shipperID {
+        width: 90%;
+    }
+}
