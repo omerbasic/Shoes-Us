@@ -49,6 +49,7 @@ export function getAllCategory() {
                 
                   
                 saveToLocalStorage(selectedProduct)
+                numberOfProductsInCart()
                 
             
             }) 
@@ -68,8 +69,6 @@ export function getAllCategory() {
     })
 }
 
-
-
 function saveToLocalStorage(selectedProduct) {
     /* Spara kundvagnen till localstorage */
 
@@ -79,4 +78,11 @@ function saveToLocalStorage(selectedProduct) {
     var json_str = JSON.stringify(inCart);
     localStorage.localCart = json_str;
 }
+
+function numberOfProductsInCart() {
+    var cart = JSON.parse(localStorage.getItem("localCart"))
+    var quantity = document.getElementById("numberOfItemsInCart")
+    quantity.innerHTML = getCart().length   
+}
+numberOfProductsInCart()
 

@@ -50,11 +50,10 @@ nav {
 .manWomanField > a {
     text-decoration: none;
     color: black;
-
 }
 
-.herr, .dam, .rea {
-    width: 30%;
+.herr, .dam, .rea, #toIndex {
+    width: 120px;
     text-align: center;
     padding: 15px;
 }
@@ -90,7 +89,7 @@ nav {
     color: #706C61;
 }
 
-.myPageText:hover, .loginText:hover, .cartField:hover {
+.myPageText:hover, .loginText:hover, .cartField:hover,  #toIndex:hover {
     color: white;
     background-color: #706C61;
 }
@@ -98,9 +97,7 @@ nav {
 .cartField {
     display: inline-flex;
     justify-content: center;
-}
-
-    
+}    
 
        /*  MAIN/ARTICLE  */
 .article {
