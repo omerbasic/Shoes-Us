@@ -61,10 +61,7 @@
     </nav>
    
             <div id="allProducts">
-                <div class="menFemImg">
-                    <a href="femShoes.php"><img src="./img/damskor.jpg" alt="FemShoes" id="damBild"></a>
-                    <a href="menShoes.php"><img src="./img/herrskor.jpg" alt="MenShoes" href="menShoes.php" id="herrBild"></a>
-                </div>
+                
             </div>    
         
 

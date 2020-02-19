@@ -1,11 +1,13 @@
 .checkOutForm {
     margin: 0 auto;
-    border: 1px solid black;
+}
+
+.checkOutForm {
+    text-align: center;
 }
 
 h1 {
-    font-size: xx-large;
-    color: red;
+    font-size: 1em;
 }
 
 #userData {
@@ -19,4 +21,9 @@ input[type=text] {
 
 #shippers {
     text-align: center;
+}
+
+.categoryTitle {
+    text-align: center;
+    font-size: 2em;
 }

@@ -18,7 +18,7 @@ try {
         if($_GET['endpoint'] == 'getAll') {
 
             include('./../Handlers/categoryHandler.php');
-            $result = getAll();
+            $result = getAllProducts();
             echo json_encode($result); 
 
         }else if($_GET['endpoint'] == 'getSpecific') {
