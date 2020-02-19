@@ -26,8 +26,9 @@ function showProductsInCart() {
             const deleteProductBtn = document.createElement("button")
             deleteProductBtn.classList = "deleteProductBtn"
             deleteProductBtn.innerHTML = "Ta bort"
+            deleteProductBtn.num = i;
             deleteProductBtn.addEventListener("click", function(){
-                removeProductFromCart(selectedProduct)
+                removeProductFromCart(this.num)
                 numberOfProductsInCart()
             })
 
@@ -40,8 +41,9 @@ function showProductsInCart() {
 }
 showProductsInCart()
 
-function removeProductFromCart(selectedProduct){
-    var cart = JSON.parse(localStorage.getItem("localCart"))
+function removeProductFromCart(title){
+    const cart = JSON.parse(localStorage.getItem("localCart"))
+    var selectedProduct = title;
     cart.splice(selectedProduct, 1)    
     localStorage.setItem("localCart", JSON.stringify(cart))
     showProductsInCart()
