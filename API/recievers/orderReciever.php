@@ -2,7 +2,7 @@
 session_start();
 
 try {
-    if (!isset($_SESSION['user'])) {
+    if (!isset($_SESSION['loggedInUser'])) {
         throw new Exception('Not authorized', 403);
     }
 
@@ -23,7 +23,7 @@ try {
 
     } else if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
-        if($_GET['endpoint'] == 'getAll') {
+        if($_GET['endpoint'] == 'getAllFromUser') {
 
             include('./../Handlers/orderHandler.php');
             $user = unserialize($_SESSION['loggedInUser'])->userID;
