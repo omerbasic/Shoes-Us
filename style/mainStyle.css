@@ -2,24 +2,19 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    margin: 0;
-}
-
 html, body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
-}
+    overflow-x: hidden;
+} 
          /* HEADER */
 
 .headTitle {
     width: 100vw;
     height: 20vh;
     background-color: #333333;
-    margin: 0 auto;
 }
 
 .textTitle {
@@ -29,126 +24,83 @@ html, body {
     margin: 0;
 }
 
-header {
-    position: fixed;
-}
+
 
           /*  NAVBAR   */
 
 nav {
-    
+    display: inline-flex !important;
     width: 100vw;
     height: auto;
     background-color: #E1F4F3;
-    margin: 0;
-    margin-top: 8;
-    position: fixed;
+    margin: 0;   
+    align-items: center; 
+    flex-wrap: wrap;  
+    justify-content: space-between;
 }
 
-.largeScreenMenu {
-    display: flex;
-    
-}
 
 .manWomanField {
     display: flex;
     justify-content: flex-start;
-    flex-wrap: nowrap;
-    width: 80%;
-    align-items: center; 
-  
-
+    width: 30vw;
+    /* margin-right: 150px; */
 }
 
-.manWomanField > #herr {
-    margin-left: 40px;
-}
-
-.manWomanField > #dam {
-    margin-left: 200px;
-}
-
-#dropdownMenuLink {
-    background-color: #E1F4F3;
-    color: black;
-    border: none;
-}
-
-#dropdownMenuLink:hover {
-    background-color: rgb(73, 67, 67);
-    color: white;
-}
-
-#herr, #dam  {
-    position: absolute !important;
-}
-
-.dropdown-menu {
-    text-align: center;
-}
-
-.categoryListDropDown {
-    color: black;
-    padding: 5px;
-    text-align: center;
-}
-.categoryListDropDown:hover {
-    background-color: rgb(73, 67, 67);
-    color: white;
+.manWomanField > a {
     text-decoration: none;
+    color: black;
+
+}
+
+.herr, .dam, .rea {
+    width: 30%;
+    text-align: center;
+    padding: 15px;
+}
+
+.herr > a, .dam > a, .rea > a {     /* Style for links in the category container */
+    text-decoration: none;
+    color: black;
+}
+
+.herr:hover, .dam:hover, .rea:hover {
+    color: white;
+    background-color: #706C61;
 }
 
     
-.loginCartWrap {                            /* Container for Login, My Page and Cart */
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
+.loginCartWrap {  
+    display: flex;                          /* Container for Login, My Page and Cart */
+    width: 30vw;
+    margin-right: 3vw;
+    /*margin-left: 150px; */
     align-items: center;
-    margin-left: -100px;
     }
 
-.loginCartWrap a, .myPageText a {
+
+.myPageText, .loginText, .cartField {
+    width: 30%;
+    text-align: center;
+    padding: 15px;
+}
+
+.myPageText > a, .loginText > a, .cartField > a {
     text-decoration: none;
-    color: black;
+    color: #706C61;
 }
 
-.loginCartWrap a:hover {
-    color:white;
-}
-
-.loginText:hover, .myPageText:hover {
-    background-color: #706C61;
+.myPageText:hover, .loginText:hover, .cartField:hover {
     color: white;
-}
-    
-.loginText, .myPageText {         /* Children div element Login, My Page and Cart */
-    width: 120px;
-    padding: 18px;
-    margin: 0;
-}
-
-.numberOfItemsInCart {
-    text-align: left;
+    background-color: #706C61;
 }
 
 .cartField {
-    padding:15px;
-    width:80px;
-    height: 60px;
-    display:flex;
-    margin-right: 30px;
+    display: inline-flex;
+    justify-content: center;
 }
 
-.cartField:hover {
-    background-color: #706C61;
-    color: white;
-}
     
-.categoryTitle {
-    display: flex;
-    justify-content: center;
-    padding: 2em;
-}
 
        /*  MAIN/ARTICLE  */
 .article {
@@ -225,107 +177,6 @@ footer {
     display:none;
 } 
 
-
-/* Responsivitet */
-
-/* IPAD PRO */
-@media only screen and (max-width: 1024px) {
-    nav {
-        margin-top: 22%;
-    }
-
-    .article {
-        margin-top: 30%;
-    }
-}
-
-/* ON TABLETS */
-
-@media only screen and (max-width: 800px) {
-    .footWrap {
-        flex-direction: column;
-    }
-    .contactUs, .clientService, .beMember {
-        width: 100%;
-    }
-
-    nav {
-        margin-top: 22%;
-    }
-
-    .article {
-        margin-top: 35%;
-    }
-
-    .menFemImg {
-        flex-wrap: wrap;
-    }
-
-    #damBild, #herrBild {
-        width: 100%;
-        margin: 20px !important;
-    }
-
-  }
-
-/* ON MOBILE SCREEN */  
-  @media only screen and (max-width: 600px) {
-    nav {
-        margin-top: 29%;
-    }
-
-    .largeScreenMenu {
-        display: none;
-        }
-
-    .mobileScreenMenu {
-        display: flex;
-        width: 100%;
-        justify-content: left;
-        align-items: baseline;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        
-    }
-
-    #dropdownMenuButton {
-        background-color: #E1F4F3;
-        color: black;
-        border: none;
-    }
-
-    div.dropdown-menu.show {
-        width: 100% !important;
-        border: none;
-    }
-
-
-    .article {
-        width: 90vw;
-        margin: 0 auto;
-        margin-top: 40%;
-    }
-
-    .newsletterField {
-        width: 90%
-    }
-
-    .RespDropdown, .dropup {
-        z-index: 99999 !important;
-        position: static !important;
-  }
-    .dropdown-item {
-        padding: 25px !important;
-        text-align: center !important;
-    }
-
-    #reaBild {
-        display: none;
-    }
-
-   
-}
-
 #allProducts {
     display: flex;
     justify-content: center;
@@ -336,10 +187,12 @@ footer {
     padding: 10px;
 }
 
-.productImage {
+#productImage {
     width: 70px;
     height: 50px;
 }
+
+
 
 /* Styling för knappen att lägga till en produkt i kundvagnen */
 .addToCartBtn {
@@ -355,3 +208,74 @@ footer {
     color: white;
     padding-left: 10px;
 }
+
+/* Responsivitet */
+
+
+@media only screen and (max-width: 800px) {
+    /* Navbar */
+
+
+
+    .loginCartWrap, .manWomanField {
+        margin-left: 0px;
+        margin-right: 0px;
+        flex-direction: column;
+        width: 100vw;
+        text-align: center;
+    }
+
+
+
+    .dam, .herr, .rea, .loginText, .myPageText, .cartField {
+        width: 100%;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+
+    nav {
+      margin-top: 12%;
+  }
+  
+    /* Footer */
+    .footWrap {
+        flex-direction: column;
+
+    }
+    .contactUs, .clientService, .beMember {
+        width: 100%;
+    }
+
+    .menFemImg {
+        flex-wrap: wrap;
+    }
+
+    #damBild, #herrBild {
+        width: 100%;
+        margin: 20px !important;
+    }
+
+  }
+
+/* ON MOBILE SCREEN */  
+  @media only screen and (max-width: 600px) {
+  
+
+    .newsletterField {
+        width: 90%
+    }
+
+
+    #reaBild {
+        display: none;
+    }
+
+   
+}
+
+
+

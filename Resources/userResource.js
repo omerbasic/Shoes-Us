@@ -27,6 +27,34 @@ export function getSpecificUser(event) {
     })
 }
 
+export function registerNewUser() {
+    var fName = document.getElementById("fName").value
+    var lName = document.getElementById("lName").value
+    var email = document.getElementById("email").value
+    var phone = document.getElementById("phone").value
+    var password = document.getElementById("password").value
+    var city = document.getElementById("city").value
+    var postalcode = document.getElementById("postalcode").value
+    var country = document.getElementById("country").value
+    var street = document.getElementById("street").value
+
+    FormData = new FormData()
+    FormData.append("fName", fName)
+    FormData.append("lName", lName)
+    FormData.append("email", email)
+    FormData.append("phone", phone)
+    FormData.append("password", password)
+    FormData.append("city", city)
+    FormData.append("postalcode", postalcode)
+    FormData.append("country", country)
+    FormData.append("street", street)
+    FormData.append("endpoint", "addNew")
+
+    makeRequest('./../API/recievers/userReciever.php', 'POST', FormData, (result) => {
+            console.log(result);
+    })
+}
+
 
 
     

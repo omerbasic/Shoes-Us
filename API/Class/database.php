@@ -1,6 +1,8 @@
 <?php
 
 class Database {
+    public $connection;
+
     function __construct() {
         $dsn = 'mysql:host=localhost;dbname=shoes_us';
         $user = 'root';

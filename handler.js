@@ -1,5 +1,16 @@
 import { getSpecificUser } from './Resources/userResource.js'
 import { getAllCategory } from './Resources/productResource.js'
+import {sendNewsLetter} from './Resources/newsLetterResource.js'
+
+var iKundvagn = [];
+
+function cartCheck(){
+const inCart = localStorage.localCart;
+if (inCart) {
+    iKundvagn = JSON.parse(inCart);
+}
+}
+cartCheck();
 
 function makeRequest(url, method, FormData, callback) {
     fetch(url, {
@@ -27,81 +38,30 @@ function getAllUser() {
     })
 }
 
-function getAllOrder() {
-    makeRequest('./API/recievers/orderReciever.php?endpoint=getAll', 'GET', null, (result) => {
+/* function getAllCategory() {
+    makeRequest('./API/recievers/categoryReciever.php?endpoint=getAll', 'GET', null, (result) => {
         console.log(result)
     })
 }
+document.getElementById("login_btn").addEventListener("click", getSpecificUser); */
 
-
-document.getElementById("menShoes").addEventListener("click", getAllCategory);
-document.getElementById("womenShoes").addEventListener("click", getAllCategory)
-// document.getElementById("login_btn").addEventListener("click", getSpecificUser);
-
-
-/*  getAllOrder();
+/* getAllCategory();
+getAllOrder();
 getAllUser();
 getAllProducts(); */
 
 
+// Funktion för att komma till startsidan från inloggningssidan
+function toIndex() {
+    window.location = "index.php"
+}
 
-//Funktion för att logga in
+document.getElementById("menShoes").addEventListener("click", getAllCategory);
+document.getElementById("womenShoes").addEventListener("click", getAllCategory)
+document.getElementById("womenShoes").addEventListener("click", getAllCategory)
+// document.getElementById("login_btn").addEventListener("click", getSpecificUser);
+document.getElementById("newsletter-form").addEventListener("submit", sendNewsLetter)
 
 
-/* function check(username) {
-    var un = username;
-    var pw = password;
-    var userToLogIn = undefined;
-
-    getSpecificUser(un);
-    console.log()
-  
-    users.forEach(user => {
-      if (un == user.username && pw == user.password) {
-        userToLogIn = user;
-  
-        loggedIn = true;
-        localStorage.setItem("Current User", JSON.stringify(userToLogIn));
-        
-      }
-    });
-  
-    if (!userToLogIn) {
-      alert("Login was unsuccessful, please check your username and password");
-  
-      loggedIn = false;
-    }
-  } */
-
-//Funktion för att registrera (temp)
-/* function store(username, password) {
-    var existingUsername = false;
-    
-  
-    users.forEach(user => {
-        if(username==user.username){
-            existingUsername = true;
-        }
-  });
-            if (!existingUsername) {
-              var newUser = {
-                username: username,
-                password: password,
-                orders: []
-              };
-        
-              users = users || [];
-              users.push(newUser);
-              var allUsers = JSON.stringify(users);
-              localStorage.allaAnvändare = allUsers;
-              users = localStorage.getItem("allaAnvändare");
-              location.reload();
-            } 
-            else{
-                alert("Username already exists");
-            }
-  }
-
-  function getCurrentUser() {
-    return JSON.parse(localStorage.getItem("Current User"));
-  } */
+// document.getElementById("login_btn").addEventListener("click", getSpecificUser);
+document.getElementById("newsletter-form").addEventListener("submit", sendNewsLetter)
