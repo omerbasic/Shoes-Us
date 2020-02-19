@@ -1,13 +1,15 @@
-
+function getCart() {
+    return JSON.parse(localStorage.getItem("localCart")) || [];
+  }
 
 function showProductsInCart() {
-    const cart = JSON.parse(localStorage.getItem('cart'))
+    
 
     const showCartProducts = document.getElementById("productsInCart")
         showCartProducts.innerHTML = "" 
 
-        for (let i = 0; i < cart.length; i++) {
-            const selectedProduct = cart[i]
+        for (let i = 0; i < getCart().length; i++) {
+            const selectedProduct = getCart()[i]
             
             const productDiv = document.createElement("div")
             productDiv.classList = "productDiv"
