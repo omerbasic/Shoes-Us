@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 function getAll() {
     include_once('./../Class/database.php');
@@ -15,6 +16,12 @@ function getAll() {
     return $result; 
 }
 
+function login($uname, $pw){
+    $loggedinUser = getSpecific($uname, $pw);
+    $_SESSION["loggedinUser"] = serialize($loggedinUser);
+    return $loggedinUser;
+
+}
 function getSpecific($uname, $pw){
     include_once('./../Class/database.php');
     $database = new Database(); 
@@ -33,7 +40,7 @@ function getSpecific($uname, $pw){
     return $result; 
 }
 
-
+//ny funkt
 function registerNewUser($fName, $lName, $email, $phone, $password, $city, $postalcode, $country, $street){
     // include_once('./../Class/userClass.php');
     include_once('./../Class/database.php');
