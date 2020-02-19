@@ -59,16 +59,12 @@
 
     
         
-        <div class="categoryTitle">";
-        <h1>Check out</h1>;
+        <div class="categoryTitle">
+            <h2>Check out</h2>
         </div>
 
-        <div class="checkOutForm">
-            <h3 style="text-align:center">Välj din fraktalternativ:</h3>
-            <fieldset id="shippers">
-              <button id="getShippers">Klicka här för att hämta våra fraktalternativ</button>
-            </fieldset>
-       		 </form>
+        <div class="checkOutForm">              
+                
             <div id="checkoutField" id="userData">
                 <h1>Förnamn</h1>
                 <input type="text" id="fName">
@@ -89,15 +85,15 @@
                 <h1>Password</h1>
                 <input type="password" id="password">
                 
-                
-                <form method="get">
-            <h3 style="text-align:center">Välj din fraktalternativ:</h3>
-            <fieldset id="shippers">
-              <button id="getShippers">Klicka här för att hämta våra fraktalternativ</button>
-            </fieldset>
-        </form>
-                <button id="checkoutSubmit">Checkout</button>
             </div>
+                
+            <form method="get">
+                <h3 style="text-align:center">Välj din fraktalternativ:</h3>
+                <fieldset id="shippers">
+                    <button id="getShippers">Klicka här för att hämta våra fraktalternativ</button>
+                </fieldset>
+            </form>
+                <button id="checkoutSubmit">Checkout</button>
         </div>
 
     
