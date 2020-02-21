@@ -3,11 +3,6 @@ Webbshop for Shoes -
 Gruppnamn: Shoes Us
 Gruppmedlemmar: Julia Mattson, Lucas Persson, Ensar Omerbasic, Michelle Lanaro, Frida Baldvinsdottir
 
-# Shoes-Us
-Webbshop for Shoes - 
-Gruppnamn: Shoes Us
-Gruppmedlemmar: Julia Mattson, Lucas Persson, Ensar Omerbasic, Michelle Lanaro, Frida Baldvinsdottir
-
 Namn på er grupp.
 Gruppens medlemmar.
 En länk dit projekt går att använda live.
