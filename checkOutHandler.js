@@ -4,9 +4,9 @@
 // ny knapp? eventlistener? -> submit, makePurchase
 
 import { registerNewUser } from './Resources/userResource.js'
-import {getLogggedInUser} from './Resources/userResource.js'
+import { getLogggedInUser } from './Resources/userResource.js'
 import { login } from './Resources/userResource.js'
-import {makeOrder} from 
+import { makeOrder } from './Resources/orderResource.js'
 
 //document.getElementById("checkOutSubmit").addEventListener("submit", registerNewUser)
 

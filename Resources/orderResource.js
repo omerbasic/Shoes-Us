@@ -1,3 +1,11 @@
+import { getLogggedInUser } from './userResource.js'
+import{ renderShippers } from './shipperResource.js'
+function getCart() {
+    return JSON.parse(localStorage.getItem("localCart")) || [];
+  }
+  function getShipperID() {
+    return JSON.parse(localStorage.getItem("shipperID")) || [];
+  }
 
 function makeRequest(url, method, FormData, callback) {
     fetch(url, {
@@ -21,6 +29,28 @@ export function getUserOrders() {
             renderOrders(result);     
         }
     })
+}
+
+export function makeOrder(){
+
+    getLogggedInUser((user) => {        
+        var myuserid = user.userID;
+    
+        })
+        var cart = getCart();
+        var shipperid = getShipperID();
+   
+    FormData = new FormData()
+    FormData.set("userID", myuserid)
+    FormData.append("Cart", cart)
+    FormData.append("shipperID", shipperid)
+    makeRequest('./../API/recievers/orderReciever.php', 'POST', FormData, (result) => {
+        console.log(result);
+})
+
+    
+
+
 }
 
 

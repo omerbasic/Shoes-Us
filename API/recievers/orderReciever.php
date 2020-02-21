@@ -16,6 +16,12 @@ try {
             $result = getAll($user);
             echo json_encode($result); 
 
+        }else if($_POST['endpoint'] == 'createOrder') {
+
+            include('./../Handlers/orderHandler.php');
+            // ->>>> $result createPurchase(userid, shipperid, date, cart.sum)
+            //createPurchaseDetails()
+
         } else {
             throw new Exception('Not a valid endpoint', 501);
         }
