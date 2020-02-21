@@ -24,14 +24,6 @@ function makeRequest(url, method, FormData, callback) {
     })
 }
 
-
-
-
-// Funktion för att komma till startsidan från inloggningssidan
-function toIndex() {
-    window.location = "index.php"
-}
-
 document.getElementById("menShoes").addEventListener("click", getAllCategory);
 document.getElementById("womenShoes").addEventListener("click", getAllCategory)
 document.getElementById("womenShoes").addEventListener("click", getAllCategory)
