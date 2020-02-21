@@ -6,22 +6,7 @@ try {
         throw new Exception('Not authorized', 403);
     }
 
-
-    else if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-        if($_POST['endpoint'] == 'getAll') {
-
-            include('./../Handlers/orderHandler.php');
-            $user = unserialize($_SESSION['user']);
-            $result = getAll($user);
-            echo json_encode($result); 
-
-        } else {
-            throw new Exception('Not a valid endpoint', 501);
-        }
-
-
-    } else if($_SERVER['REQUEST_METHOD'] == 'GET') {
+     else if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         if($_GET['endpoint'] == 'getAllFromUser') {
 
@@ -29,6 +14,18 @@ try {
             $userId = unserialize($_SESSION['loggedinUser'])[userID];
             error_log($userId);
             $result = getAllFromUser($userId);
+            echo json_encode($result); 
+
+        } else if($_GET['endpoint'] == 'getAllOrder') {
+
+            include('./../Handlers/orderHandler.php');
+            $result = getAllOrders();
+            echo json_encode($result); 
+
+        } else if($_GET['endpoint'] == 'getAllSubscribers') {
+
+            include('./../Handlers/orderHandler.php');
+            $result = getAllSubscribers();
             echo json_encode($result); 
 
         } else {
