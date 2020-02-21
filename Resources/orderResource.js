@@ -23,6 +23,7 @@ export function getUserOrders() {
     })
 }
 
+
 function renderOrders(result) {
     var MainOrderDiv = document.getElementsByClassName("MainOrderDiv")[0];
     var order = result;

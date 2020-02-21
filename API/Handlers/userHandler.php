@@ -62,7 +62,7 @@ function registerNewUser($fName, $lName, $email, $phone, $password, $city, $post
                             ':country' => $country, 
                             ':street' => $street));
 
-        echo "New user inserted in database";
+        
         
         
     } catch(PDOException $e) {
