@@ -21,7 +21,7 @@ function showProductsInCart() {
             const title = document.createElement("p")
             title.innerHTML = selectedProduct.name
             const price = document.createElement("p") 
-            price.innerHTML = selectedProduct.price + " kr"
+            price.innerHTML = selectedProduct.price - selectedProduct.discount + " kr"
 
             const deleteProductBtn = document.createElement("button")
             deleteProductBtn.classList = "deleteProductBtn"
@@ -35,6 +35,12 @@ function showProductsInCart() {
             productDiv.append(image)
             productDiv.append(title)
             productDiv.append(price)
+            if(selectedProduct.discount != 0) {
+                const discount = document.createElement("p")
+                discount.innerHTML = "10 %"
+                discount.id = "discount"
+                productDiv.append(discount)
+            }
             productDiv.append(deleteProductBtn)
             showCartProducts.append(productDiv)            
         }
