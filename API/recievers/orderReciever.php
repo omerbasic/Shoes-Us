@@ -2,12 +2,12 @@
 session_start();
 
 try {
-    if (!isset($_SESSION['loggedInUser'])) {
+    if (!isset($_SESSION['loggedinUser'])) {
         throw new Exception('Not authorized', 403);
     }
 
 
-    else if($_SERVER['REQUEST_METHOD'] == 'GET') {
+    else if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if($_POST['endpoint'] == 'getAll') {
 
@@ -26,8 +26,9 @@ try {
         if($_GET['endpoint'] == 'getAllFromUser') {
 
             include('./../Handlers/orderHandler.php');
-            $user = unserialize($_SESSION['loggedInUser'])->userID;
-            $result = getAllFromUser($user);
+            $userId = unserialize($_SESSION['loggedinUser'])[userID];
+            error_log($userId);
+            $result = getAllFromUser($userId);
             echo json_encode($result); 
 
         } else {
