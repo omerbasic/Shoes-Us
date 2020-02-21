@@ -11,7 +11,7 @@ import {getLogggedInUser} from './Resources/userResource.js'
 function testFunction(){
     getLogggedInUser((user) => {        
         console.log(user)
-        console.log(user.Fname)
+        console.log(user.fName)
         
         if(user.fName){
             document.getElementById("checkoutField").innerHTML = "";
