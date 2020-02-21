@@ -46,21 +46,24 @@ export function getAllCategory() {
             addToCartBtn.classList = "addToCartBtn"
             // Funktion för att lägga i kundvagnen 
             addToCartBtn.addEventListener("click", function()  { 
-                
-                  
                 saveToLocalStorage(selectedProduct)
-                numberOfProductsInCart()
-                
-            
+                numberOfProductsInCart()           
             }) 
             const title = document.createElement("p")
             title.innerHTML = selectedProduct.name
             const price = document.createElement("p") 
-            price.innerHTML = selectedProduct.price + " kr"
+            price.innerHTML = selectedProduct.price - selectedProduct.discount + " kr"
 
             productDiv.append(image)
             productDiv.append(title)
             productDiv.append(price)
+
+            if(selectedProduct.discount != 0) {
+                const discount = document.createElement("p")
+                discount.innerHTML = "10 %"
+                discount.id = "discount"
+                productDiv.append(discount)
+            }
             addToCartBtn.appendChild(cartIcon)
             productDiv.append(addToCartBtn)
             showProducts.append(productDiv)            
@@ -97,11 +100,16 @@ export function getDiscount() {
             const title = document.createElement("p")
             title.innerHTML = selectedProduct.name
             const price = document.createElement("p") 
-            price.innerHTML = selectedProduct.price + " kr"
+            price.innerHTML = selectedProduct.price - selectedProduct.discount +  " kr"
+
+            const discount = document.createElement("p")
+            discount.innerHTML = "10 %"
+            discount.id = "discount"
 
             productDiv.append(image)
             productDiv.append(title)
             productDiv.append(price)
+            productDiv.append(discount)
             addToCartBtn.appendChild(cartIcon)
             productDiv.append(addToCartBtn)
             showProducts.append(productDiv) 
@@ -132,21 +140,24 @@ function showBothMenAndWomen(){
             addToCartBtn.classList = "addToCartBtn"
             // Funktion för att lägga i kundvagnen 
             addToCartBtn.addEventListener("click", function()  { 
-                
-                  
                 saveToLocalStorage(selectedProduct)
                 numberOfProductsInCart()
-                
-            
             }) 
             const title = document.createElement("p")
             title.innerHTML = selectedProduct.name
             const price = document.createElement("p") 
-            price.innerHTML = selectedProduct.price + " kr"
+            price.innerHTML = selectedProduct.price - selectedProduct.discount + " kr"
 
             productDiv.append(image)
             productDiv.append(title)
             productDiv.append(price)
+
+            if(selectedProduct.discount != 0) {
+                const discount = document.createElement("p")
+                discount.innerHTML = "10 %"
+                discount.id = "discount"
+                productDiv.append(discount)
+            }
             addToCartBtn.appendChild(cartIcon)
             productDiv.append(addToCartBtn)
             showProducts.append(productDiv)            
