@@ -21,8 +21,7 @@
     
 
 <nav> 
-    <div id="toIndex"><a href="index.php">Startsidan</a></div>   
-   
+    <div id="toIndex"></div>    
 
     <div class="loginCartWrap">
         <div class="loginText">
