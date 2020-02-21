@@ -21,13 +21,19 @@ try {
             $result = getAllProducts();
             echo json_encode($result); 
 
+        }else if($_GET['endpoint'] == 'getDiscount') {
+
+            include('./../Handlers/categoryHandler.php');
+            $result = getDiscount();
+            echo json_encode($result); 
+
         }else if($_GET['endpoint'] == 'getSpecific') {
 
             include('./../Handlers/categoryHandler.php');
             $result = getSpecific($_GET['categorytoSend']);
             echo json_encode($result); 
 
-        }else {
+        }else  {
             throw new Exception('Not a valid endpoint', 501);
         }
 
