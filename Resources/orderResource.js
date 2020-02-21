@@ -13,7 +13,7 @@ function makeRequest(url, method, FormData, callback) {
 }
 
 export function getUserOrders() {
-    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAll', 'GET', null, (result) => {
+    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllFromUser', 'GET', null, (result) => {
         if (result.status == 404){
             console.log("Det gick inte att hämta dina beställningar!")
         } else {

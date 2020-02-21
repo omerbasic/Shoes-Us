@@ -1,5 +1,4 @@
-<?php 
-session_start();
+<?php
 
 function getAll() {
     include_once('./../Class/database.php');
@@ -18,7 +17,6 @@ function getAll() {
 
 function login($uname, $pw){
     $loggedinUser = getSpecific($uname, $pw);
-    $_SESSION["loggedinUser"] = serialize($loggedinUser);
     return $loggedinUser;
 
 }

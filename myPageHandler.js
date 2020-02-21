@@ -1,8 +1,8 @@
 import { getUserOrders } from './Resources/orderResource.js'
 
-
-let loggedInUser;
 getUserOrders();
+
+/* let loggedInUser;
 
 getLoggedInUser((user) => {
     // Gör det som skall göras om det finns någon inloggad
@@ -15,4 +15,4 @@ getLoggedInUser((user) => {
     if(user.isAdmin) {
         // Visa dashboard knapp
     }
-})
+}) */
