@@ -8,6 +8,11 @@ import {getLogggedInUser} from './Resources/userResource.js'
 
 //document.getElementById("checkOutSubmit").addEventListener("submit", registerNewUser)
 
+function testFunction(){
+    getLogggedInUser((user) => {
+        console.log(user)
 
+    })
+}
 
-getLogggedInUser();
+testFunction();
