@@ -68,4 +68,23 @@ function getAllSubscribers() {
     return $result; 
 }
 
+function getAllChangeProducts() {
+    include_once('./../Class/database.php');
+    $database = new Database();
+
+    $query = <<<EOD
+    SELECT productID, name, inStock FROM product;
+    EOD;
+    $statement = $database->connection->prepare($query);
+    $statement->execute();
+    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    if (empty($result)) {
+        throw new exception('No order found', 404);
+        exit;
+    }
+    return $result; 
+}
+
+
 ?>

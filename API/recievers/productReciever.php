@@ -3,10 +3,12 @@
 try {
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        error_log(json_encode($_POST));
+        if($_POST['endpoint'] == 'updateInStock') {
 
-        if($_POST['endpoint'] == 'add') {
-
-            //här kan du lägga till post eller annan metod
+            include('./../Handlers/productHandler.php');
+            $result = updateInStock($_POST["inStock"], $_POST["productID"]);
+            echo json_encode($result); 
 
         } else {
             throw new Exception('Not a valid endpoint', 501);

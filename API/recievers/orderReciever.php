@@ -4,7 +4,7 @@ session_start();
 try {
     if (!isset($_SESSION['loggedinUser'])) {
         throw new Exception('Not authorized', 403);
-    }
+    } 
 
      else if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
@@ -26,6 +26,12 @@ try {
 
             include('./../Handlers/orderHandler.php');
             $result = getAllSubscribers();
+            echo json_encode($result); 
+
+        } else if($_GET['endpoint'] == 'getAllChangeProducts') {
+
+            include('./../Handlers/orderHandler.php');
+            $result = getAllChangeProducts();
             echo json_encode($result); 
 
         } else {
