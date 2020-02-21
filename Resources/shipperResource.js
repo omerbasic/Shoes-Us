@@ -60,8 +60,6 @@ function renderShippers(result) {
 
 
         shippersWrap.appendChild(shipperDiv);
-
-        shipperDiv.appendChild(shipperID);
         shipperDiv.appendChild(name);
         shipperDiv.appendChild(info);
         shipperDiv.appendChild(buttonDiv);
