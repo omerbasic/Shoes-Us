@@ -9,8 +9,13 @@ import {getLogggedInUser} from './Resources/userResource.js'
 //document.getElementById("checkOutSubmit").addEventListener("submit", registerNewUser)
 
 function testFunction(){
-    getLogggedInUser((user) => {
+    getLogggedInUser((user) => {        
         console.log(user)
+        console.log(user.Fname)
+        
+        if(user.fName){
+            document.getElementById("checkoutField").innerHTML = "";
+        }
 
     })
 }
