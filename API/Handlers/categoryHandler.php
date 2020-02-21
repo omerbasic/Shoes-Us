@@ -45,4 +45,19 @@ function getAllProducts() {
     return $result; 
 }
 
+function getDiscount() {
+    include_once('./../Class/database.php');
+    $database = new Database();
+
+    $query = $database->connection->prepare('SELECT * FROM product WHERE discount != 0;');
+    $query->execute();
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    if (empty($result)) {
+        throw new exception('No category found', 404);
+        exit;
+    }
+    return $result; 
+};
+
 ?>
