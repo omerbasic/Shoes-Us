@@ -18,10 +18,7 @@ export function getLogggedInUser(callback){
             console.log("not logged in")
 
         } else {
-       
-            console.log(result)
-            document.getElementById("checkoutField").innerHTML = "";
-            
+            callback(result)
         }
     })
 

@@ -65,9 +65,10 @@ try {
         }else if ($_GET['endpoint'] == 'login'){
             include('./../Handlers/userHandler.php');
             $result = login($_GET['username'] , $_GET['password']);
+            $_SESSION["loggedinUser"] = serialize($result);
             echo json_encode($result);
 
-        }else if ($_GET['endpoint'] == 'getLoggedInUser'){
+        }else if ($_GET['endpoint'] == 'getLoggedinUser'){
             
             if (isset($_SESSION['loggedinUser'])){
                 $result = unserialize($_SESSION['loggedinUser']) ;
