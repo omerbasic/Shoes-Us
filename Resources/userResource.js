@@ -13,7 +13,7 @@ function makeRequest(url, method, FormData, callback) {
 
 export function getLogggedInUser(callback){
 
-    makeRequest('./../API/recievers/userReciever.php?endpoint=getLoggedInUser', 'GET', null, (result) => {
+    makeRequest('./../API/recievers/userReciever.php?endpoint=getLoggedinUser', 'GET', null, (result) => {
         if (result == false){
             console.log("not logged in")
 

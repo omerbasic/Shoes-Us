@@ -23,6 +23,29 @@ export function getUserOrders() {
     })
 }
 
+export function getAllOrders() {
+    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllOrder', 'GET', null, (result) => {
+        if (result.status == 404){
+            console.log("Det gick inte att hämta alla beställningar!")
+        } else {
+            console.log(result)
+            renderOrders(result);     
+        }
+    })
+}
+
+export function getAllSubscribers() {
+    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllSubscribers', 'GET', null, (result) => {
+        if (result.status == 404){
+            console.log("Det gick inte att hämta alla beställningar!")
+        } else {
+            console.log(result)
+            var sub = result;           
+            renderNewsletterSubscribers(sub);     
+        }
+    })
+}
+
 function renderOrders(result) {
     var MainOrderDiv = document.getElementsByClassName("MainOrderDiv")[0];
     var order = result;
@@ -72,6 +95,49 @@ function renderOrders(result) {
         contentDiv.appendChild(quantity);
         contentDiv.appendChild(name);
         contentDiv.appendChild(price);
+
+    }    
+}    
+
+function renderNewsletterSubscribers(sub) {
+    var MainOrderDiv = document.getElementsByClassName("MainOrderDiv")[0];
+    var order = sub;
+    
+    var orderDiv = document.createElement("div");
+    orderDiv.classList = "orderDiv";
+    orderDiv.innerHTML = '';
+    MainOrderDiv.appendChild(orderDiv);
+
+    for (var i = 0; i < order.length; i++) {
+        var selectedOrder = order[i];
+
+
+        var contentDiv = document.createElement('div');
+        contentDiv.classList = 'contentDiv';
+        
+        var subscriptionID = document.createElement('p');
+        subscriptionID.classList = 'subscriptionID';
+        subscriptionID.innerText = 'subscriptionID' + ' ' + selectedOrder.subscriptionID;
+
+        var fName = document.createElement('p')
+        fName.classList = 'fName';
+        fName.innerText = 'Namn' +':'+ ' ' + selectedOrder.fName;
+
+        var lName = document.createElement('p');
+        lName.classList = 'lName';
+        lName.innerText = 'Efternamn' +':'+ ' ' + selectedOrder.lName;
+
+        var email = document.createElement('p');
+        email.classList = 'email';
+        email.innerText = 'email' +':'+ ' ' + selectedOrder.email;
+
+        orderDiv.appendChild(contentDiv);
+
+        contentDiv.appendChild(subscriptionID);
+        contentDiv.appendChild(fName);
+        contentDiv.appendChild(lName);
+        contentDiv.appendChild(email);
+
 
     }    
 }    

@@ -1,18 +1,26 @@
 import { getUserOrders } from './Resources/orderResource.js'
+import {getLogggedInUser} from './Resources/userResource.js'
+import {getAllOrders} from './Resources/orderResource.js'
+import {getAllSubscribers} from './Resources/orderResource.js'
 
-getUserOrders();
+checkAdminStatus();
 
-/* let loggedInUser;
+function checkAdminStatus(){
+    getLogggedInUser((user) => {
+        //gör det som skall göras om någon är inloggad
+        
+        if (user.isAdmin == 1) {
+            
+            console.log('du är admin');
+            getAllOrders();
+            getAllSubscribers();
+        } else if (user.isAdmin == 0) {
 
-getLoggedInUser((user) => {
-    // Gör det som skall göras om det finns någon inloggad
-    console.log(user)
-    if(user) {
-        loggedInUser = user
-        // Visa logga ut knapp etc.
-    }
-    
-    if(user.isAdmin) {
-        // Visa dashboard knapp
-    }
-}) */
+            console.log('du är inte admin');
+            getUserOrders();
+        }
+
+
+    })
+
+}
