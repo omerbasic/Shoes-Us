@@ -91,7 +91,9 @@ nav {
     color: black;
 }
 
+
 .myPageText:hover, .loginText:hover, .cartField:hover  {
+
     background-color: #706C61;
 }
 
@@ -114,7 +116,6 @@ nav {
 #discount {
     color: red;
 }
-
 
         /*  FOOTER  */  
 
