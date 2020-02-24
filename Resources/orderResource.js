@@ -171,6 +171,9 @@ function renderProducts(product) {
             FormData.append('inStock', productInput.value)
             FormData.append('endpoint', 'updateInStock')
             makeRequest('./../API/recievers/productReciever.php', 'POST', FormData, (result) => {
+                if (result) {
+                    location.reload();
+                }
             })
         })
         
