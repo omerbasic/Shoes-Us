@@ -254,21 +254,26 @@ export function getAllChangeProducts() {
 
 
 function cartSort(){
+    console.log(getCart());
     let sortedCart = [];
-    let quantity;
+    let quantity = 1;
     let sum;
+    let totalsum;
+    let testArray = getCart();
 
-    for(var i = 0; i<getCart().length; i++){
-        
+    for(var i = 0; i<testArray.length; i++){
+        var specificItem = testArray[i];
+        totalsum = totalsum + specificItem.price
+        console.log(totalsum)
         sortedCart.forEach(item => {
-            if (item == getCart[i]){
+            if (item.product == specificItem.productID){
                 quantity = quantity + 1;
                 sum = sum + item.price
                 
                 
             }
             else{
-                sortedCart.push(item.productID, quantity, sum)
+                sortedCart.push(item.productID, quantity, item.price)
             }
             
         });
