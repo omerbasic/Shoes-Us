@@ -25,7 +25,7 @@ try {
             $cartArray = $_POST["cart"];
             
             for($i = 0; $i<$cartArray; $i++){
-                createPurchaseDetail($result, $productID, $quantity, $sum)
+                createPurchaseDetail($result, $productID, $quantity, $sum);
 
             }
 
