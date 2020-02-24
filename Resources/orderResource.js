@@ -6,6 +6,9 @@ function getCart() {
   function getShipperID() {
     return JSON.parse(localStorage.getItem("shipperID")) || [];
   }
+  /* function getCartSum() {
+    return JSON.parse(localStorage.getItem("localCart")) || [];
+  } */
 
 function makeRequest(url, method, FormData, callback) {
     fetch(url, {
