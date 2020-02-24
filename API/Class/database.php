@@ -1,5 +1,5 @@
 <?php
-/**/
+
 class Database {
     public $connection;
 
@@ -10,6 +10,7 @@ class Database {
         /*$dsn = 'mysql:host=my18b.sqlserver.se;dbname=246400-shoes-us';
         $user = '246400_at68952';
         $password = 'grupparbete';*/
+
 
         try {
             $this->connection = new PDO($dsn, $user, $password);
