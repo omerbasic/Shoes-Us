@@ -1,4 +1,4 @@
-# Shoes-Us
+﻿# Shoes-Us
 Webbshop for Shoes - 
 Gruppnamn: Shoes Us
 Gruppmedlemmar: Julia Mattson, Lucas Persson, Ensar Omerbasic, Michelle Lanaro, Frida Baldvinsdottir
@@ -95,3 +95,6 @@ Lösenord: test
 User:
 Användarnamn: test@test.com
 Lösenord: test
+
+WebbShoppen ligger live på www.fridaedda.se
+Vi är inte klara med vårt projekt.
