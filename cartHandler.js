@@ -29,8 +29,9 @@ function showProductsInCart() {
         deleteProductBtn.addEventListener("click", function(){
             removeProductFromCart(this.num)
             numberOfProductsInCart()
+            totalCart()
         })
-
+        
         productDiv.append(image)
         productDiv.append(title)
         productDiv.append(price)
@@ -41,14 +42,10 @@ function showProductsInCart() {
             productDiv.append(discount)
         }
         productDiv.append(deleteProductBtn)
-        showCartProducts.append(productDiv)    
+        showCartProducts.append(productDiv)  
     }
-
-    const sumDiv = document.getElementById("goToCheckout")
-    const sum = document.createElement("p")
-    sum.classList = "sumText"
-    sum.innerText = "Totalbelopp: " + totalCart() + " kr"
-    sumDiv.appendChild(sum)
+    
+    
 }
 showProductsInCart()
 
@@ -68,11 +65,20 @@ function numberOfProductsInCart() {
 numberOfProductsInCart()
 
 function totalCart(){
+    const sumDiv = document.getElementById("goToCheckout")
+    sumDiv.innerHTML = "";
     const cart = JSON.parse(localStorage.getItem("localCart"))
     let total = 0;
+    const sum = document.createElement("p")
+    sum.classList = "sumText"
+    
     for (var i = 0; i < cart.length; i++){
         total += Number(cart[i].price);
+        sum.innerText = "Totalbelopp: " + total + " kr"
+        sumDiv.appendChild(sum)
     }
-    return total
+    
 }
+totalCart()  
+
 
