@@ -80,8 +80,6 @@ function createPurchaseDetail($purchaseID, $productID, $quantity, $sum){
     }
 }
 
-?>
-
 function getAllOrders() {
     include_once('./../Class/database.php');
     $database = new Database();
