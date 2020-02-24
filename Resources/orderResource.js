@@ -1,3 +1,11 @@
+import { getLogggedInUser } from './userResource.js'
+import{ renderShippers } from './shipperResource.js'
+function getCart() {
+    return JSON.parse(localStorage.getItem("localCart")) || [];
+  }
+  function getShipperID() {
+    return JSON.parse(localStorage.getItem("shipperID")) || [];
+  }
 
 function makeRequest(url, method, FormData, callback) {
     fetch(url, {
@@ -23,40 +31,7 @@ export function getUserOrders() {
     })
 }
 
-export function getAllOrders() {
-    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllOrder', 'GET', null, (result) => {
-        if (result.status == 404){
-            console.log("Det gick inte att hämta alla beställningar!")
-        } else {
-            console.log(result)
-            renderOrders(result);     
-        }
-    })
-}
 
-export function getAllSubscribers() {
-    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllSubscribers', 'GET', null, (result) => {
-        if (result.status == 404){
-            console.log("Det gick inte att hämta alla beställningar!")
-        } else {
-            console.log(result)
-            let sub = result;           
-            renderNewsletterSubscribers(sub);     
-        }
-    })
-}
-
-export function getAllChangeProducts() {
-    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllChangeProducts', 'GET', null, (result) => {
-        if (result.status == 404){
-            console.log("Det gick inte att hämta alla Producter!")
-        } else {
-            console.log(result)
-            let product = result;
-            renderProducts(product);
-        }
-    })
-}
 
 function renderOrders(result) {
     let MainOrderDiv = document.getElementsByClassName("MainOrderDiv")[0];
@@ -209,7 +184,66 @@ function renderProducts(product) {
         contentDiv.appendChild(productButton);
 
     }    
-}    
+}  
+export function makeOrder(){
+
+    getLogggedInUser((user) => {        
+        var myuserid = user.userID;
+    
+        })
+        var cart = getCart();
+        var shipperid = getShipperID();
+   
+    FormData = new FormData()
+    FormData.set("userID", myuserid)
+    FormData.append("Cartsum", cart.sum)
+    FormData.append("shipperID", shipperid)
+    FormData.append("endpoint", "createorder")
+    FormData.append("Cart", JSON.stringify(cart));
+    makeRequest('./../API/recievers/orderReciever.php', 'POST', FormData, (result) => {
+        console.log(result);
+})
+
+
+
+
+}
+
+
+export function getAllOrders() {
+    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllOrder', 'GET', null, (result) => {
+        if (result.status == 404){
+            console.log("Det gick inte att hämta alla beställningar!")
+        } else {
+            console.log(result)
+            renderOrders(result);     
+        }
+    })
+}
+
+export function getAllSubscribers() {
+    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllSubscribers', 'GET', null, (result) => {
+        if (result.status == 404){
+            console.log("Det gick inte att hämta alla beställningar!")
+        } else {
+            console.log(result)
+            let sub = result;           
+            renderNewsletterSubscribers(sub);     
+        }
+    })
+}
+
+export function getAllChangeProducts() {
+    makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllChangeProducts', 'GET', null, (result) => {
+        if (result.status == 404){
+            console.log("Det gick inte att hämta alla Producter!")
+        } else {
+            console.log(result)
+            let product = result;
+            renderProducts(product);
+        }
+    })
+}
 
 
 

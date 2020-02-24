@@ -16,13 +16,28 @@ try {
             $result = getAllFromUser($userId);
             echo json_encode($result); 
 
+
+        }else if($_POST['endpoint'] == 'createOrder') {
+
+            include('./../Handlers/orderHandler.php');
+            $result = createPurchase($_POST["userID"], $_POST["shipperID"], $_POST["email"],$_POST["cartsum"]);
+            // ->>>> $result = createPurchase(userid, shipperid, date, cart.sum)
+            //createPurchaseDetails($result)
+            $cartArray = $_POST["cart"];
+
+        } else {
+            throw new Exception('Not a valid endpoint', 501);
         } else if($_GET['endpoint'] == 'getAllOrder') {
+
 
             include('./../Handlers/orderHandler.php');
             $result = getAllOrders();
             echo json_encode($result); 
 
-        } else if($_GET['endpoint'] == 'getAllSubscribers') {
+        }
+
+       
+         else if($_GET['endpoint'] == 'getAllSubscribers') {
 
             include('./../Handlers/orderHandler.php');
             $result = getAllSubscribers();
