@@ -50,7 +50,7 @@ function registerNewUser($fName, $lName, $email, $phone, $password, $city, $post
         $database->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $qry = $database->connection->prepare('INSERT INTO user (fName, lName, email, phone, password, isAdmin, city, postalcode, country, street) 
-                                VALUES (:fName, :lName, :email, :phone, :password, 0, :city, :postalcode, :country, :street)');
+                                VALUES (:fName, :lName, :email, :phone, :password, 0, :city, :postalcode, :country, :street);');
 
         $qry->execute(array(':fName' => $fName, 
                             ':lName' => $lName,     
@@ -62,7 +62,7 @@ function registerNewUser($fName, $lName, $email, $phone, $password, $city, $post
                             ':country' => $country, 
                             ':street' => $street));
 
-        echo "New user inserted in database";
+        
         
         
     } catch(PDOException $e) {
