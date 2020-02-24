@@ -23,7 +23,7 @@ export function getAllShippers() {
     })
 }
 
-function renderShippers(result) {  
+export function renderShippers(result) {  
 
    let shippersWrap = document.getElementById("shippers");
    let shipper = result;
@@ -55,6 +55,7 @@ function renderShippers(result) {
         choiceBtn.innerText = 'Välj'
         choiceBtn.addEventListener('click', function() {
             console.log(selectedShipper.shipperID)
+            localStorage.setItem('shipperID', selectedShipper.shipperID)
         })
         buttonDiv.appendChild(choiceBtn);
 

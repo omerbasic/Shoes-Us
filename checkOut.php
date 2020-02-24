@@ -25,15 +25,15 @@
     <nav> 
         <div class="manWomanField">
             <div class="dam">
-                <a href="index.php" id="womenShoes">Dam</a>
+               
             </div>
 
             <div class="herr">
-                <a href="index.php" id="menShoes">Herr</a>
+                
             </div>
 
             <div class="rea">
-                <a href="index.php" id="sale">Rea</a>
+               
             </div>
         </div>
 
@@ -81,9 +81,9 @@
                 <h1>Telefonnummer</h1>
                 <input type="text" id="phone">
                 <h1>Username</h1>
-                <input type="text" id="email">
+                <input type="text" id="usernameInput">
                 <h1>Password</h1>
-                <input type="password" id="password">
+                <input type="password" id="passwordInput">
                 
             </div>
                 
@@ -94,8 +94,9 @@
                 <button id="getShippers">Klicka här för att hämta våra fraktalternativ</button>
             </div>
            
-                <button id="checkoutSubmit">Checkout</button>
+            <button id="checkoutSubmit">Checkout</button>
         </div>
+        <div id="buttonDiv"></div>
 
     
     
