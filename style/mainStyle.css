@@ -17,13 +17,16 @@ html, body {
     background-color: #333333;
 }
 
+.headTitle > a {
+    text-decoration: none;
+}
+
 
 .textTitle {
     font-family: 'Rock Salt', cursive;
     color: white;
     padding: 20px;
     margin: 0;
-    text-decoration: none;
 }
 
 
