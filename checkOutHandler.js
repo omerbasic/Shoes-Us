@@ -12,7 +12,7 @@ import { makeOrder } from './Resources/orderResource.js'
 
 function testFunction(){
     getLogggedInUser((user) => {        
-        console.log(user.email)
+
         console.log(user.fName)
         
         if(user.fName){
