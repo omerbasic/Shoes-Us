@@ -42,13 +42,15 @@ export function makeOrder(){
    
     FormData = new FormData()
     FormData.set("userID", myuserid)
-    FormData.append("Cart", cart)
+    FormData.append("Cartsum", cart.sum)
     FormData.append("shipperID", shipperid)
+    FormData.append("endpoint", "createorder")
+    FormData.append("Cart", JSON.stringify(cart));
     makeRequest('./../API/recievers/orderReciever.php', 'POST', FormData, (result) => {
         console.log(result);
 })
 
-    
+
 
 
 }

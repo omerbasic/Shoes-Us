@@ -19,8 +19,10 @@ try {
         }else if($_POST['endpoint'] == 'createOrder') {
 
             include('./../Handlers/orderHandler.php');
-            // ->>>> $result createPurchase(userid, shipperid, date, cart.sum)
-            //createPurchaseDetails()
+            $result = createPurchase($_POST["userID"], $_POST["shipperID"], $_POST["email"],$_POST["cartsum"]);
+            // ->>>> $result = createPurchase(userid, shipperid, date, cart.sum)
+            //createPurchaseDetails($result)
+            $cartArray = $_POST["cart"];
 
         } else {
             throw new Exception('Not a valid endpoint', 501);
