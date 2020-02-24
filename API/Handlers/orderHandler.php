@@ -37,7 +37,7 @@ function createPurchase($userID, $shipperID, $date, $sum){
         $database->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $qry = $database->connection->prepare('INSERT INTO purchase (userID, shipperID, date, sum) 
-                                VALUES (:userID, :shipperID, :date, :sum); SELECT purchaseID FROM purchase;');
+                                VALUES (:userID, :shipperID, :date, :sum); SELECT purchaseID;');
 
         $qry->execute(array(':userID' => $userID, 
                             ':shipperID' => $shipperID,     

@@ -196,18 +196,18 @@ export function makeOrder(){
     getLogggedInUser((user) => {        
         var myuserid = user.userID;
     
-        })
-        var cart = getCart();
-        var shipperid = getShipperID();
+        
+        var shipperid = JSON.stringify(getShipperID());
    
-    FormData = new FormData()
-    FormData.set("userID", myuserid)
-    FormData.append("Cartsum", cart.sum)
-    FormData.append("shipperID", shipperid)
-    FormData.append("endpoint", "createorder")
-    FormData.append("Cart", JSON.stringify(cart));
-    makeRequest('./../API/recievers/orderReciever.php', 'POST', FormData, (result) => {
+        FormData = new FormData()
+        FormData.set("userID", myuserid)
+        //FormData.append("Cartsum", cart.sum)
+        FormData.append("shipperID", shipperid)
+        FormData.append("endpoint", "createOrder")
+        FormData.append("Cart", getCart());
+        makeRequest('./../API/recievers/orderReciever.php', 'POST', FormData, (result) => {
         console.log(result);
+        })
 })
 
 
@@ -253,3 +253,27 @@ export function getAllChangeProducts() {
 
 
 
+function cartSort(){
+    let sortedCart = [];
+    let quantity;
+    let sum;
+
+    for(var i = 0; i<getCart().length; i++){
+        
+        sortedCart.forEach(item => {
+            if (item == getCart[i]){
+                quantity = quantity + 1;
+                sum = sum + item.price
+                
+                
+            }
+            else{
+                sortedCart.push(item.productID, quantity, sum)
+            }
+            
+        });
+
+    }
+    console.log(sortedCart)
+}
+cartSort();

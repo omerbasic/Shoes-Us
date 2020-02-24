@@ -17,18 +17,19 @@ try {
             echo json_encode($result); 
 
         }else if($_POST['endpoint'] == 'createOrder') {
-
+           /*  $today = date("m.d.y");
+            $sum = 1;
             include('./../Handlers/orderHandler.php');
-            $result = createPurchase($_POST["userID"], $_POST["shipperID"], $_POST["email"],$_POST["cartsum"]);
+            $result = createPurchase($_POST["userID"], $_POST["shipperID"], $today, $sum); */
             // ->>>> $result = createPurchase(userid, shipperid, date, cart.sum)
             //createPurchaseDetails($result)
-            $cartArray = $_POST["cart"];
+           /*  $cartArray = $_POST["cart"];
             
             for($i = 0; $i<$cartArray; $i++){
                 createPurchaseDetail($result, $productID, $quantity, $sum)
 
-            }
-
+            } */
+            echo json_encode($_POST);
         } else {
             throw new Exception('Not a valid endpoint', 501);
         }
