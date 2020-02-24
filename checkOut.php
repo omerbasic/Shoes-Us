@@ -25,15 +25,15 @@
     <nav> 
         <div class="manWomanField">
             <div class="dam">
-                <a href="index.php" id="womenShoes">Dam</a>
+               
             </div>
 
             <div class="herr">
-                <a href="index.php" id="menShoes">Herr</a>
+                
             </div>
 
             <div class="rea">
-                <a href="index.php" id="sale">Rea</a>
+               
             </div>
         </div>
 

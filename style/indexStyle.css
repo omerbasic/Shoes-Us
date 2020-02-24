@@ -5,7 +5,17 @@
     align-items: center;
 }
 
-#damBild, #herrBild {
-    width: 300px;
-    margin: 10px;
+.herr, .dam, .rea, #toIndex {
+    width: 120px;
+    text-align: center;
+    padding: 15px;
+}
+
+.herr > a, .dam > a, .rea > a {     /* Style for links in the category container */
+    text-decoration: none;
+    color: black;
+}
+.herr:hover, .dam:hover, .rea:hover {
+    color: white;
+    background-color: #706C61;
 }
