@@ -16,6 +16,7 @@ export function getLogggedInUser(callback){
     makeRequest('./../API/recievers/userReciever.php?endpoint=getLoggedinUser', 'GET', null, (result) => {
         if (result == false){
             console.log("not logged in")
+            callback(result)
 
         } else {
             callback(result)
@@ -55,20 +56,20 @@ export function getSpecific(event) {
 //ny registeredUserOrder funktion
 // var fname = getcurrentuser.Fname
 //formdata.append ("fname", fname) -> endpoint userreciever POST
-export function registerNewUser(event) {
-    event.preventDefault()
+export function registerNewUser() {
+    
     var fName = document.getElementById("fName").value
     var lName = document.getElementById("lName").value
-    var email = document.getElementById("email").value
+    var email = document.getElementById("usernameInput").value
     var phone = document.getElementById("phone").value
-    var password = document.getElementById("password").value
+    var password = document.getElementById("passwordInput").value
     var city = document.getElementById("city").value
     var postalcode = document.getElementById("postalcode").value
     var country = document.getElementById("country").value
     var street = document.getElementById("street").value
 
     FormData = new FormData()
-    FormData.append("fName", fName)
+    FormData.set("fName", fName)
     FormData.append("lName", lName)
     FormData.append("email", email)
     FormData.append("phone", phone)
@@ -79,16 +80,16 @@ export function registerNewUser(event) {
     FormData.append("street", street)
     FormData.append("endpoint", "addNew")
 
-    makeRequest('./../API/recievers/userReciever.php?endpoint=getSpecific&username=' + email + '&password=' + password, 'GET', null, (user) => {
+   
         
             
             makeRequest('./../API/recievers/userReciever.php', 'POST', FormData, (result) => {
                     console.log(result);
             })
         
-    })
+    }
 
-}
+
 
 
 
