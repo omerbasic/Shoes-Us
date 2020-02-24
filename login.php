@@ -61,6 +61,11 @@
             <input type="password" id="passwordInput">
         <button id="login_btn">Login</button>
     </div>
+
+    <div id="logoutDiv">
+        <p>Tryck knappen för att logga ut</p>
+            <button id="logout_btn">Logga ut</button>
+    </div>
    
     
     
