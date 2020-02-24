@@ -46,8 +46,10 @@
 
     <div id="productsInCart"></div>
 
+    <div id="totalSum" style="text-align: center;"></div>
+
     <div id="goToCheckout" style="text-align: center;">
-                <a href="./checkOut.php">Gå till checkOut --></a>
+                <a href="./checkOut.php">Slutför köp</a>
             </div>
     
     <footer>

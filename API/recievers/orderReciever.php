@@ -4,18 +4,17 @@ session_start();
 try {
     if (!isset($_SESSION['loggedinUser'])) {
         throw new Exception('Not authorized', 403);
-    } 
+    }
 
-     else if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
-        if($_GET['endpoint'] == 'getAllFromUser') {
+    else if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        if($_POST['endpoint'] == 'getAll') {
 
             include('./../Handlers/orderHandler.php');
-            $userId = unserialize($_SESSION['loggedinUser'])[userID];
-            error_log($userId);
-            $result = getAllFromUser($userId);
+            $user = unserialize($_SESSION['user']);
+            $result = getAll($user);
             echo json_encode($result); 
-
 
         }else if($_POST['endpoint'] == 'createOrder') {
 
@@ -24,29 +23,25 @@ try {
             // ->>>> $result = createPurchase(userid, shipperid, date, cart.sum)
             //createPurchaseDetails($result)
             $cartArray = $_POST["cart"];
+            
+            for($i = 0; $i<$cartArray; $i++){
+                createPurchaseDetail($result, $productID, $quantity, $sum);
+
+            }
 
         } else {
             throw new Exception('Not a valid endpoint', 501);
-        } else if($_GET['endpoint'] == 'getAllOrder') {
-
-
-            include('./../Handlers/orderHandler.php');
-            $result = getAllOrders();
-            echo json_encode($result); 
-
         }
 
-       
-         else if($_GET['endpoint'] == 'getAllSubscribers') {
+
+    } else if($_SERVER['REQUEST_METHOD'] == 'GET') {
+
+        if($_GET['endpoint'] == 'getAllFromUser') {
 
             include('./../Handlers/orderHandler.php');
-            $result = getAllSubscribers();
-            echo json_encode($result); 
-
-        } else if($_GET['endpoint'] == 'getAllChangeProducts') {
-
-            include('./../Handlers/orderHandler.php');
-            $result = getAllChangeProducts();
+            $userId = unserialize($_SESSION['loggedinUser'])[userID];
+            error_log($userId);
+            $result = getAllFromUser($userId);
             echo json_encode($result); 
 
         } else {
