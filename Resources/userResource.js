@@ -39,6 +39,14 @@ export async function login(event) {
     })
 }
 
+export function logout(user) {
+    localStorage.removeItem("Current User", JSON.stringify(user));
+    console.log("You have successfully logged out from local storage!")
+    makeRequest('./../API/recievers/userReciever.php?endpoint=logout', 'GET', null, (user) => {
+        console.log("You have logged out from session")
+    })
+}
+
 
 export function getSpecific(event) {
 
