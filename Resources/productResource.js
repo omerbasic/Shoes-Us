@@ -25,7 +25,6 @@ export function getAllCategory() {
         categorytoSend = 2;
     }
     makeRequest('./API/recievers/categoryReciever.php?endpoint=getSpecific&categorytoSend=' + categorytoSend , 'GET', null, (result) => {
-    
         const showProducts = document.getElementById("allProducts")
         showProducts.innerHTML = "" 
 
@@ -94,8 +93,7 @@ export function getDiscount() {
             // Funktion för att lägga i kundvagnen 
             addToCartBtn.addEventListener("click", function()  { 
                 saveToLocalStorage(selectedProduct)
-                numberOfProductsInCart()
-                           
+                numberOfProductsInCart()                 
             }) 
             const title = document.createElement("p")
             title.innerHTML = selectedProduct.name
@@ -168,11 +166,8 @@ function showBothMenAndWomen(){
 showBothMenAndWomen()
 
 function saveToLocalStorage(selectedProduct) {
-    /* Spara kundvagnen till localstorage */
-
+    /* Sparar kundvagnen till localstorage */
     inCart.push(selectedProduct)
-
-    
     var json_str = JSON.stringify(inCart);
     localStorage.localCart = json_str;
 }
@@ -180,8 +175,7 @@ function saveToLocalStorage(selectedProduct) {
 function numberOfProductsInCart() {
     var getCart = JSON.parse(localStorage.getItem("localCart"))
     var quantity = document.getElementById("numberOfItemsInCart")
-    quantity.innerHTML = getCart.length  
-    console.log(getCart.length) 
+    quantity.innerHTML = getCart.length   
 }
 numberOfProductsInCart()
 

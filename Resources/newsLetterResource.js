@@ -11,12 +11,9 @@ function makeRequest(url, method, FormData, callback) {
     })
 }
 
-
 export function sendNewsLetter(event) {
     event.preventDefault()
     const formData = new FormData(event.target);
-
     makeRequest('./../API/recievers/newsletterReciever.php', 'POST', formData, (result) => {
-        console.log(result)
     })
 }

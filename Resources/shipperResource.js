@@ -15,16 +15,13 @@ export function getAllShippers() {
     event.preventDefault()
     makeRequest('./../API/recievers/shippersReciever.php?endpoint=getAllShippers', 'GET', null, (result) => {
         if (result.status == 404){
-            console.log("Kan inte hämta leverantörer!")
         } else {
-            console.log(result)
             renderShippers(result);     
         }
     })
 }
 
 export function renderShippers(result) {  
-
    let shippersWrap = document.getElementById("shippers");
    let shipper = result;
    
@@ -54,17 +51,13 @@ export function renderShippers(result) {
         choiceBtn.classList = 'chooseShipper'
         choiceBtn.innerText = 'Välj'
         choiceBtn.addEventListener('click', function() {
-            console.log(selectedShipper.shipperID)
             localStorage.setItem('shipperID', selectedShipper.shipperID)
         })
         buttonDiv.appendChild(choiceBtn);
-
 
         shippersWrap.appendChild(shipperDiv);
         shipperDiv.appendChild(name);
         shipperDiv.appendChild(info);
         shipperDiv.appendChild(buttonDiv);
-
     }    
-
 }
