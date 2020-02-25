@@ -25,7 +25,7 @@ export function getLogggedInUser(callback){
 
 }
 
-export function login(event) {
+export async function login(event) {
 
     var username = document.getElementById("usernameInput").value
     var password = document.getElementById("passwordInput").value

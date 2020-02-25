@@ -291,9 +291,9 @@ function cartSort(userId, shipperID){
         }
     })
 
-        FormData = new FormData()
-        FormData.set("sortedCart", JSON.stringify(order))
-        FormData.set("endpoint", "createOrder")
+        
+        FormData.append("sortedCart", JSON.stringify(order))
+        FormData.append("endpoint", "createOrder")
         //måste få över hela arrayen av objekt order till PHP på något jävla sätt
         
         makeRequest('./../API/recievers/orderReciever.php', 'POST', FormData, (result) => {
