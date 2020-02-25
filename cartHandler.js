@@ -30,8 +30,7 @@ function showProductsInCart() {
             removeProductFromCart(this.num)
             numberOfProductsInCart()
             totalCart()
-        })
-        
+        })    
         productDiv.append(image)
         productDiv.append(title)
         productDiv.append(price)
@@ -44,8 +43,6 @@ function showProductsInCart() {
         productDiv.append(deleteProductBtn)
         showCartProducts.append(productDiv)  
     }
-    
-    
 }
 showProductsInCart()
 
@@ -77,7 +74,6 @@ function totalCart(){
         sum.innerText = "Totalbelopp: " + total + " kr"
         sumDiv.appendChild(sum)
     }
-    
 }
 totalCart()  
 

@@ -9,8 +9,8 @@ html, body {
     padding: 0px;
     overflow-x: hidden;
 } 
-         /* HEADER */
 
+/* HEADER */
 .headTitle {
     width: 100vw;
     height: 20vh;
@@ -21,7 +21,6 @@ html, body {
     text-decoration: none;
 }
 
-
 .textTitle {
     font-family: 'Rock Salt', cursive;
     color: white;
@@ -29,10 +28,7 @@ html, body {
     margin: 0;
 }
 
-
-
-          /*  NAVBAR   */
-
+/*  NAVBAR   */
 nav {
     display: inline-flex !important;
     width: 100vw;
@@ -43,7 +39,6 @@ nav {
     flex-wrap: wrap;  
     justify-content: space-between;
 }
-
 
 .manWomanField {
     display: flex;
@@ -56,18 +51,14 @@ nav {
     text-decoration: none;
     color: black;
 }
-
-
-
-    
+  
+/* Container for Login, My Page and Cart */
 .loginCartWrap {  
-    display: flex;                          /* Container for Login, My Page and Cart */
+    display: flex;                          
     width: 30vw;
     margin-right: 3vw;
-    /*margin-left: 150px; */
     align-items: center;
-    }
-
+}
 
 .myPageText, .loginText, .cartField {
     width: 30%;
@@ -82,17 +73,15 @@ nav {
 
 
 .myPageText:hover, .loginText:hover, .cartField:hover  {
-
     background-color: #706C61;
 }
-
 
 .cartField {
     display: inline-flex;
     justify-content: center;
 }    
 
-       /*  MAIN/ARTICLE  */
+/*  MAIN/ARTICLE  */
 .article {
     background-color: white;
     margin: 0 auto;
@@ -106,8 +95,7 @@ nav {
     color: red;
 }
 
-        /*  FOOTER  */  
-
+/*  FOOTER  */  
 footer {
     margin: 0 auto;
     width: 100vw;
@@ -145,8 +133,6 @@ footer {
 .sendBtn:hover {
     cursor: pointer;
 }
-
-
 
 .footWrap {
     display: flex;
@@ -189,9 +175,6 @@ footer {
     height: 70px;
 }
 
-
-
-
 /* Styling för knappen att lägga till en produkt i kundvagnen */
 .addToCartBtn {
     background-color: #333333;
@@ -210,13 +193,8 @@ footer {
 }
 
 /* Responsivitet */
-
-
 @media only screen and (max-width: 800px) {
     /* Navbar */
-
-
-
     .loginCartWrap, .manWomanField {
         margin-left: 0px;
         margin-right: 0px;
@@ -224,8 +202,6 @@ footer {
         width: 100vw;
         text-align: center;
     }
-
-
 
     .dam, .herr, .rea, .loginText, .myPageText, .cartField {
         width: 100%;
@@ -235,8 +211,6 @@ footer {
         padding-left: 0px;
         padding-right: 0px;
     }
-
-
   
     /* Footer */
     .footWrap {
@@ -255,27 +229,22 @@ footer {
         width: 100%;
         margin: 20px !important;
     }
-
   }
 
 /* ON MOBILE SCREEN */  
   @media only screen and (max-width: 600px) {
   
-
     .newsletterField {
         width: 90%
     }
 
-
     #reaBild {
         display: none;
     }
-
-   
+  
 }
 
 /* styling for mypage contentDIV */
-
 .contentDiv {
     border-style: solid;
     display: flex;

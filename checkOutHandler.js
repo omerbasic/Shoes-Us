@@ -11,18 +11,12 @@ import { makeOrder } from './Resources/orderResource.js'
 //document.getElementById("checkOutSubmit").addEventListener("submit", registerNewUser)
 
 function testFunction(){
-    getLogggedInUser((user) => {        
-
-        console.log(user.fName)
-        
+    getLogggedInUser((user) => {           
         if(user.fName){
             document.getElementById("checkoutField").innerHTML = "";
-        }
-        
+        }     
     })
-    
 }
-
 testFunction();
 
 document.getElementById("checkoutSubmit").addEventListener("click", buttonFunction)
@@ -35,10 +29,7 @@ function afterOrderAlert(){
 }
 
 function buttonFunction(){
-    
     getLogggedInUser((user) => {        
-        
-        
         if(user.fName){
             makeOrder();
             afterOrderAlert();
@@ -51,5 +42,4 @@ function buttonFunction(){
         }
         
     })
-   
 }

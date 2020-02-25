@@ -6,9 +6,6 @@ function getCart() {
   function getShipperID() {
     return JSON.parse(localStorage.getItem("shipperID")) || [];
   }
-  /* function getCartSum() {
-    return JSON.parse(localStorage.getItem("localCart")) || [];
-  } */
 
 function makeRequest(url, method, data, callback) {
     fetch(url, {
@@ -26,15 +23,11 @@ function makeRequest(url, method, data, callback) {
 export function getUserOrders() {
     makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllFromUser', 'GET', null, (result) => {
         if (result.status == 404){
-            console.log("Det gick inte att hämta dina beställningar!")
         } else {
-            console.log(result)
             renderOrders(result);     
         }
     })
 }
-
-
 
 function renderOrders(result) {
     let MainOrderDiv = document.getElementsByClassName("MainOrderDiv")[0];
@@ -47,8 +40,6 @@ function renderOrders(result) {
 
     for (let i = 0; i < order.length; i++) {
         let selectedOrder = order[i];
-
-
         let contentDiv = document.createElement('div');
         contentDiv.classList = 'contentDiv';
         
@@ -76,7 +67,6 @@ function renderOrders(result) {
         price.classList = 'text';
         price.innerText = 'Pris' + ' ' + selectedOrder.price + 'kr';
 
-
         orderDiv.appendChild(contentDiv);
 
         contentDiv.appendChild(purchaseID);
@@ -85,7 +75,6 @@ function renderOrders(result) {
         contentDiv.appendChild(quantity);
         contentDiv.appendChild(name);
         contentDiv.appendChild(price);
-
     }    
 }    
 
@@ -100,8 +89,6 @@ function renderNewsletterSubscribers(sub) {
 
     for (let i = 0; i < order.length; i++) {
         let selectedOrder = order[i];
-
-
         let contentDiv = document.createElement('div');
         contentDiv.classList = 'contentDiv';
         
@@ -127,8 +114,6 @@ function renderNewsletterSubscribers(sub) {
         contentDiv.appendChild(fName);
         contentDiv.appendChild(lName);
         contentDiv.appendChild(email);
-
-
     }    
 }  
 
@@ -143,8 +128,6 @@ function renderProducts(product) {
 
     for (let i = 0; i < order.length; i++) {
         let selectedOrder = order[i];
-
-
         let contentDiv = document.createElement('div');
         contentDiv.classList = 'contentDiv';
         
@@ -163,8 +146,6 @@ function renderProducts(product) {
         let productInput = document.createElement('input');
         productInput.classList = 'productInput';
         productInput.innerText = 'ändra antal';
-        
-
         let productButton = document.createElement('button');
         productButton.classList = 'productButton';
         productButton.innerText = 'uppdatera';
@@ -179,39 +160,24 @@ function renderProducts(product) {
                 }
             })
         })
-        
-
         orderDiv.appendChild(contentDiv);
-
         contentDiv.appendChild(productID);
         contentDiv.appendChild(name);
         contentDiv.appendChild(inStock);
         contentDiv.appendChild(productInput);
         contentDiv.appendChild(productButton);
-
     }    
 }  
 export function makeOrder(){
-
     getLogggedInUser((user) => {        
-        
         cartSort(user.userID, JSON.stringify(getShipperID()))
-   
-        
-})
-
-
-
-
+    })
 }
-
 
 export function getAllOrders() {
     makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllOrder', 'GET', null, (result) => {
         if (result.status == 404){
-            console.log("Det gick inte att hämta alla beställningar!")
         } else {
-            console.log(result)
             renderOrders(result);     
         }
     })
@@ -220,9 +186,7 @@ export function getAllOrders() {
 export function getAllSubscribers() {
     makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllSubscribers', 'GET', null, (result) => {
         if (result.status == 404){
-            console.log("Det gick inte att hämta alla beställningar!")
         } else {
-            console.log(result)
             let sub = result;           
             renderNewsletterSubscribers(sub);     
         }
@@ -232,15 +196,12 @@ export function getAllSubscribers() {
 export function getAllChangeProducts() {
     makeRequest('./../API/recievers/orderReciever.php?endpoint=getAllChangeProducts', 'GET', null, (result) => {
         if (result.status == 404){
-            console.log("Det gick inte att hämta alla Producter!")
         } else {
-            console.log(result)
             let product = result;
             renderProducts(product);
         }
     })
 }
-
 
 function formatDate(date) {
     var d = new Date(date),
@@ -252,12 +213,10 @@ function formatDate(date) {
         month = '0' + month;
     if (day.length < 2) 
         day = '0' + day;
-
     return [year, month, day].join('-');
 }
 
 function cartSort(userId, shipperID){
-    
     let order = {
         sum: 0,
         userId: userId,
@@ -291,17 +250,11 @@ function cartSort(userId, shipperID){
         }
     })
 
-        let data = new FormData();
-        data.set("sortedCart", JSON.stringify(order))
-        data.set("endpoint", "createOrder")
-        //måste få över hela arrayen av objekt order till PHP på något jävla sätt
-        
-        makeRequest('./../API/recievers/orderReciever.php', 'POST', data, (result) => {
-        console.log(result);
-        data.delete('sortedCart')
-        data.delete('endpoint')
-        })
-
-        console.log(order)
-
+    let data = new FormData();
+    data.set("sortedCart", JSON.stringify(order))
+    data.set("endpoint", "createOrder")
+    makeRequest('./../API/recievers/orderReciever.php', 'POST', data, (result) => {
+    data.delete('sortedCart')
+    data.delete('endpoint')
+    })
 }

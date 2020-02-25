@@ -11,10 +11,12 @@
     padding: 15px;
 }
 
-.herr > a, .dam > a, .rea > a {     /* Style for links in the category container */
+/* Style for links in the category container */
+.herr > a, .dam > a, .rea > a {    
     text-decoration: none;
     color: black;
 }
+
 .herr:hover, .dam:hover, .rea:hover {
     color: white;
     background-color: #706C61;
