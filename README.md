@@ -121,11 +121,15 @@ Kommentarer:
 Inloggningsuppgifter:
 
 Admin:
+
 Användarnamn: o.o
+
 Lösenord: test
 
 User:
+
 Användarnamn: test@test.com
+
 Lösenord: test
 
 Webbshopen ligger på: www.fridaedda.se
