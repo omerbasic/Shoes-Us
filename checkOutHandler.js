@@ -24,6 +24,8 @@ document.getElementById("checkoutSubmit").addEventListener("click", buttonFuncti
 function afterOrderAlert(){
     alert("Tack för ditt köp!");
     window.location.href='index.php';
+
+    localStorage.removeItem("localCart");
 }
 
 function buttonFunction(){
