@@ -9,7 +9,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <script defer type ="module" src="./myPageHandler.js"></script>
-    <script defer type="module" src="./handler.js"></script>
 
 </head>
 <body>

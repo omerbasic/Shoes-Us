@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style/mainStyle.css">
     <link rel="stylesheet" href="./style/loginStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
-    <script defer type="module" src="handler.js"></script>
+    
     <script defer type="module" src="loginHandler.js"></script>
 </head>
 <body>
