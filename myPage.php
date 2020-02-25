@@ -9,6 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <script defer type ="module" src="./myPageHandler.js"></script>
+    <script defer type="module" src="./handler.js"></script>
 
 </head>
 <body>
@@ -47,7 +48,7 @@
             </div>
 
             <div class="cartField">
-                <div class="numberOfItemsInCart"></div>
+                <div id="numberOfItemsInCart"></div>
                 <a href="cart.php"><img src="./img/CartIcon.png" style="width:20px;height:auto;text-align:right;"></a>
             </div>
    
