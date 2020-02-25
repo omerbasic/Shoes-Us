@@ -1,7 +1,7 @@
-function makeRequest(url, method, FormData, callback) {
+function makeRequest(url, method, data, callback) {
     fetch(url, {
         method: method,
-        body: FormData
+        body: data
     }).then((data) => {
         return data.json()
     }).then((result) => {
@@ -76,26 +76,25 @@ export function registerNewUser() {
     var country = document.getElementById("country").value
     var street = document.getElementById("street").value
 
-    FormData = new FormData()
-    FormData.set("fName", fName)
-    FormData.append("lName", lName)
-    FormData.append("email", email)
-    FormData.append("phone", phone)
-    FormData.append("password", password)
-    FormData.append("city", city)
-    FormData.append("postalcode", postalcode)
-    FormData.append("country", country)
-    FormData.append("street", street)
-    FormData.append("endpoint", "addNew")
+    let data = new FormData()
+    data.append("fName", fName)
+    data.append("lName", lName)
+    data.append("email", email)
+    data.append("phone", phone)
+    data.append("password", password)
+    data.append("city", city)
+    data.append("postalcode", postalcode)
+    data.append("country", country)
+    data.append("street", street)
+    data.append("endpoint", "addNew")
 
-   
-        
+    console.log(data)
             
-            makeRequest('./../API/recievers/userReciever.php', 'POST', FormData, (result) => {
-                    console.log(result);
-            })
+    makeRequest('./../API/recievers/userReciever.php', 'POST', data, (result) => {
+            console.log(result);
+    })
         
-    }
+}
 
 
 

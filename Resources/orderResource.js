@@ -10,10 +10,10 @@ function getCart() {
     return JSON.parse(localStorage.getItem("localCart")) || [];
   } */
 
-function makeRequest(url, method, FormData, callback) {
+function makeRequest(url, method, data, callback) {
     fetch(url, {
         method: method,
-        body: FormData
+        body: data
     }).then((data) => {
         return data.json()
     }).then((result) => {
@@ -291,13 +291,15 @@ function cartSort(userId, shipperID){
         }
     })
 
-        
-        FormData.append("sortedCart", JSON.stringify(order))
-        FormData.append("endpoint", "createOrder")
+        let data = new FormData();
+        data.set("sortedCart", JSON.stringify(order))
+        data.set("endpoint", "createOrder")
         //måste få över hela arrayen av objekt order till PHP på något jävla sätt
         
-        makeRequest('./../API/recievers/orderReciever.php', 'POST', FormData, (result) => {
+        makeRequest('./../API/recievers/orderReciever.php', 'POST', data, (result) => {
         console.log(result);
+        data.delete('sortedCart')
+        data.delete('endpoint')
         })
 
         console.log(order)
