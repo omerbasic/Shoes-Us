@@ -21,15 +21,23 @@ testFunction();
 
 document.getElementById("checkoutSubmit").addEventListener("click", buttonFunction)
 
+function afterOrderAlert(){
+    alert("Tack för ditt köp!");
+    window.location.href='index.php';
+}
+
 function buttonFunction(){
     getLogggedInUser((user) => {        
         if(user.fName){
             makeOrder();
+            afterOrderAlert();
         }
         else {
             registerNewUser();
             login();
             makeOrder();
-        }   
+            afterOrderAlert();
+        }
+        
     })
 }

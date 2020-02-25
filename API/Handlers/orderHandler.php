@@ -66,7 +66,10 @@ function createPurchaseDetail($purchaseID, $productID, $quantity, $sum){
         $database->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $qry = $database->connection->prepare('INSERT INTO purchasedetails (purchaseID, productID, quantity, sum) 
-                                VALUES (:purchaseID, :productID, :quantity, :sum); ALTER TABLE products WHERE productID = :productID inStock - :quantity');
+                                VALUES (:purchaseID, :productID, :quantity, :sum); 
+                                UPDATE product
+                                SET inStock = ifNull(inStock,0) - :quantity
+                                WHERE productID = :productID');
 
         $qry->execute(array(':purchaseID' => $purchaseID, 
                             ':productID' => $productID,     
