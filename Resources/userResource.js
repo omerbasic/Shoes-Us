@@ -41,6 +41,7 @@ export function logout(user) {
     localStorage.removeItem("Current User", JSON.stringify(user));
     makeRequest('./../API/recievers/userReciever.php?endpoint=logout', 'GET', null, (user) => {
     })
+    alert("Du har loggat ut!")
 }
 
 
