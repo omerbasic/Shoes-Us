@@ -119,9 +119,11 @@ Kommentarer:
 * Develop är vår primära branch.
 
 Inloggningsuppgifter:
+
 Admin:
 Användarnamn: o.o
 Lösenord: test
+
 User:
 Användarnamn: test@test.com
 Lösenord: test
