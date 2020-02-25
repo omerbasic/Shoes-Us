@@ -8,21 +8,15 @@ checkAdminStatus();
 
 function checkAdminStatus(){
     getLogggedInUser((user) => {
-        //gör det som skall göras om någon är inloggad
-        
         if (user.isAdmin == 1) {
-            
-            console.log('du är admin');
+            // admin
             getAllOrders();
             getAllSubscribers();
             getAllChangeProducts();
         } else if (user.isAdmin == 0) {
-
-            console.log('du är inte admin');
+            // inte admin
             getUserOrders();
         }
-
-
     })
 
 }
@@ -31,6 +25,5 @@ function numberOfProductsInCart() {
     var getCart = JSON.parse(localStorage.getItem("localCart"))
     var quantity = document.getElementById("numberOfItemsInCart")
     quantity.innerHTML = getCart.length  
-    console.log(getCart.length) 
 }
 numberOfProductsInCart()
