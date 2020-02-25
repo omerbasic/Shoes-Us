@@ -194,20 +194,10 @@ function renderProducts(product) {
 export function makeOrder(){
 
     getLogggedInUser((user) => {        
-        var myuserid = user.userID;
-    
         
-        var shipperid = JSON.stringify(getShipperID());
+        cartSort(user.userID, JSON.stringify(getShipperID()))
    
-        FormData = new FormData()
-        FormData.set("userID", myuserid)
-        //FormData.append("Cartsum", cart.sum)
-        FormData.append("shipperID", shipperid)
-        FormData.append("endpoint", "createOrder")
-        FormData.append("Cart", getCart());
-        makeRequest('./../API/recievers/orderReciever.php', 'POST', FormData, (result) => {
-        console.log(result);
-        })
+        
 })
 
 
@@ -252,33 +242,64 @@ export function getAllChangeProducts() {
 }
 
 
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
 
-function cartSort(){
-    console.log(getCart());
-    let sortedCart = [];
-    let quantity = 1;
-    let sum;
-    let totalsum;
-    let testArray = getCart();
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
 
-    for(var i = 0; i<testArray.length; i++){
-        var specificItem = testArray[i];
-        totalsum = totalsum + specificItem.price
-        console.log(totalsum)
-        sortedCart.forEach(item => {
-            if (item.product == specificItem.productID){
-                quantity = quantity + 1;
-                sum = sum + item.price
-                
-                
-            }
-            else{
-                sortedCart.push(item.productID, quantity, item.price)
-            }
-            
-        });
-
-    }
-    console.log(sortedCart)
+    return [year, month, day].join('-');
 }
-cartSort();
+
+function cartSort(userId, shipperID){
+    
+    let order = {
+        sum: 0,
+        userId: userId,
+        shipperID: shipperID,
+        date: formatDate(new Date().toDateString()),
+        details: []
+    }
+
+    let cart = getCart()
+    console.log(cart)
+
+    cart.forEach((product) => {
+        let exists = false
+        order.sum += (Number)(product.price)
+
+        order.details.forEach((orderDetail) => {
+            if(orderDetail.productID == product.productID) {
+                orderDetail.quantity++
+                orderDetail.sum += (Number)(product.price)
+
+                exists = true
+            }
+        })
+
+        if(!exists) {
+            order.details.push({
+                productID: product.productID,
+                quantity: 1,
+                sum: (Number)(product.price)
+            })
+        }
+    })
+
+        FormData = new FormData()
+        FormData.set("sortedCart", JSON.stringify(order))
+        FormData.set("endpoint", "createOrder")
+        //måste få över hela arrayen av objekt order till PHP på något jävla sätt
+        
+        makeRequest('./../API/recievers/orderReciever.php', 'POST', FormData, (result) => {
+        console.log(result);
+        })
+
+        console.log(order)
+
+}
