@@ -30,28 +30,30 @@ function createPurchase($userID, $shipperID, $date, $sum){
     // include_once('./../Class/userClass.php');
     include_once('./../Class/database.php');
     $database = new Database();
+    $datum = $date;
     
 
     try {
 
         $database->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $qry = $database->connection->prepare('INSERT INTO purchase (userID, shipperID, date, sum) 
-                                VALUES (:userID, :shipperID, :date, :sum); SELECT purchaseID FROM purchase;');
+        $qry = $database->connection->prepare('INSERT INTO purchase (userID, shipperID, `date`, `sum`)
+         VALUES (:userID, :shipperID, :datum, :sum);');
 
         $qry->execute(array(':userID' => $userID, 
                             ':shipperID' => $shipperID,     
-                            ':date' => $date, 
+                            ':datum' => $datum, 
                             ':sum' => $sum));
 
+                            $id = $database->connection->lastInsertId();
+                            return $id;
         
-                            $result = $query->fetch(PDO::FETCH_ASSOC);
+                           /*  $result = $query->fetch(PDO::FETCH_ASSOC); */
         
     } catch(PDOException $e) {
         error_log($e->getMessage());
         throw $e;
     }
-    return $result;
 }
 function createPurchaseDetail($purchaseID, $productID, $quantity, $sum){
     // include_once('./../Class/userClass.php');
@@ -64,7 +66,7 @@ function createPurchaseDetail($purchaseID, $productID, $quantity, $sum){
         $database->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $qry = $database->connection->prepare('INSERT INTO purchasedetails (purchaseID, productID, quantity, sum) 
-                                VALUES (:purchaseID, :productID, :quantity, :sum);');
+                                VALUES (:purchaseID, :productID, :quantity, :sum); ALTER TABLE products WHERE productID = :productID inStock - :quantity');
 
         $qry->execute(array(':purchaseID' => $purchaseID, 
                             ':productID' => $productID,     
@@ -80,10 +82,11 @@ function createPurchaseDetail($purchaseID, $productID, $quantity, $sum){
     }
 }
 
+
 function getAllOrders() {
     include_once('./../Class/database.php');
     $database = new Database();
-
+    
     $query = <<<EOD
     SELECT o.purchaseID, o.date,o.sum, pd.quantity, pd.sum, p.name, p.price
     FROM purchase AS o 
@@ -95,7 +98,7 @@ function getAllOrders() {
     $statement = $database->connection->prepare($query);
     $statement->execute();
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+    
     if (empty($result)) {
         throw new exception('No order found', 404);
         exit;
@@ -106,14 +109,14 @@ function getAllOrders() {
 function getAllSubscribers() {
     include_once('./../Class/database.php');
     $database = new Database();
-
+    
     $query = <<<EOD
     SELECT subscriptionID, fName, lName, email FROM subscription
     EOD;
     $statement = $database->connection->prepare($query);
     $statement->execute();
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+    
     if (empty($result)) {
         throw new exception('No order found', 404);
         exit;
@@ -124,14 +127,14 @@ function getAllSubscribers() {
 function getAllChangeProducts() {
     include_once('./../Class/database.php');
     $database = new Database();
-
+    
     $query = <<<EOD
     SELECT productID, name, inStock FROM product;
     EOD;
     $statement = $database->connection->prepare($query);
     $statement->execute();
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+    
     if (empty($result)) {
         throw new exception('No order found', 404);
         exit;
@@ -141,3 +144,4 @@ function getAllChangeProducts() {
 
 
 ?>
+    

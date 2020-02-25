@@ -14,22 +14,24 @@ try {
             echo json_encode($result); 
 
         }else if($_POST['endpoint'] == 'createOrder') {
-
+            $order = json_decode($_POST['sortedCart'], true);
             include('./../Handlers/orderHandler.php');
-            $result = createPurchase($_POST["userID"], $_POST["shipperID"], $_POST["email"],$_POST["cartsum"]);
-            // ->>>> $result = createPurchase(userid, shipperid, date, cart.sum)
-            //createPurchaseDetails($result)
-            $cartArray = $_POST["cart"];
-            
-            for($i = 0; $i<$cartArray; $i++){
-                createPurchaseDetail($result, $productID, $quantity, $sum);
 
+            $result = createPurchase($order["userId"], $order["shipperID"], $order["date"], $order["sum"]); 
+            
+             for($i = 0; $i < sizeof($order["details"]); $i++){
+                createPurchaseDetail($result, $order["details"][$i]["productID"], $order["details"][$i]["quantity"], $order["details"][$i]["sum"]);
             }
 
-        } else { 
-            throw new Exception('Not a valid endpoint', 501); }
-        } else if($_SERVER['REQUEST_METHOD'] == 'GET') {
- 
+
+            echo json_encode($order["details"][1]["productID"]);
+        } else {
+            throw new Exception('Not a valid endpoint', 501);
+        }
+
+
+    } else if($_SERVER['REQUEST_METHOD'] == 'GET') {
+
         if($_GET['endpoint'] == 'getAllFromUser') {
  
             include('./../Handlers/orderHandler.php');
