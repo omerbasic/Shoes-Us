@@ -47,7 +47,7 @@
             </div>
 
             <div class="cartField">
-                <div class="numberOfItemsInCart"></div>
+                <div id="numberOfItemsInCart"></div>
                 <a href="cart.php"><img src="./img/CartIcon.png" style="width:20px;height:auto;text-align:right;"></a>
             </div>
    

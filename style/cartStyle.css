@@ -16,4 +16,13 @@
     font-size: 20px;
     color: #333333;
 }
+#goToCheckout > a {
+    background-color: #333333;
+    color: #ffffff;
+    width: 80px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
 

@@ -67,6 +67,9 @@ try {
             $result = login($_GET['username'] , $_GET['password']);
             $_SESSION["loggedinUser"] = serialize($result);
             echo json_encode($result);
+        
+        } else if ($_GET['endpoint'] == 'logout'){
+            session_destroy();
 
         }else if ($_GET['endpoint'] == 'getLoggedinUser'){
             

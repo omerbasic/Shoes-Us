@@ -65,7 +65,7 @@ function numberOfProductsInCart() {
 numberOfProductsInCart()
 
 function totalCart(){
-    const sumDiv = document.getElementById("goToCheckout")
+    const sumDiv = document.getElementById("totalSum")
     sumDiv.innerHTML = "";
     const cart = JSON.parse(localStorage.getItem("localCart"))
     let total = 0;
