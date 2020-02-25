@@ -31,10 +31,13 @@ export async function login(event) {
     var password = document.getElementById("passwordInput").value
     makeRequest('./../API/recievers/userReciever.php?endpoint=login&username=' + username + '&password=' + password, 'GET', null, (user) => {
         if (user.status == 404){
-            console.log("Det gick inte att logga in!")
+            
+            alert("Det gick inte att logga in!");
         } else {
             console.log(user)
             localStorage.setItem("Current User", JSON.stringify(user));
+            alert("Du är inloggad!");
+            window.location.href='index.php';
         }
     })
 }
