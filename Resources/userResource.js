@@ -27,8 +27,12 @@ export async function login(event) {
     var password = document.getElementById("passwordInput").value
     makeRequest('./../API/recievers/userReciever.php?endpoint=login&username=' + username + '&password=' + password, 'GET', null, (user) => {
         if (user.status == 404){
+            
+            alert("Det gick inte att logga in!");
         } else {
             localStorage.setItem("Current User", JSON.stringify(user));
+            alert("Du är inloggad!");
+            window.location.href='index.php';
         }
     })
 }
@@ -37,6 +41,7 @@ export function logout(user) {
     localStorage.removeItem("Current User", JSON.stringify(user));
     makeRequest('./../API/recievers/userReciever.php?endpoint=logout', 'GET', null, (user) => {
     })
+    alert("Du har loggat ut!")
 }
 
 

@@ -34,7 +34,7 @@
         <a href="myPage.php">Mina sidor</a>
     </div>
     <div class="cartField">
-    <div class="numberOfItemsInCart">(...)</div>
+    <div class="numberOfItemsInCart"></div>
         <a href="cart.php"><img src="./img/CartIcon.png" style="width:20px;height:auto;text-align:right;"></a>
     </div>
     </div>
